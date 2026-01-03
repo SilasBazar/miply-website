@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Whiteboard Palette */
+        --bg-canvas: #f8fafc; /* Slate 50 */
+        --ink-main: #1e293b;  /* Slate 800 */
+        --ink-muted: #64748b; /* Slate 500 */
+        
+        --marker-highlight: #fcd34d; /* Amber 300 */
+        --pen-blue: #3b82f6;  /* Blue 500 */
+        --pen-red: #ef4444;   /* Red 500 */
+        --grid-dot: #cbd5e1;  /* Slate 300 */
+    }
+
+    body {
+        background-color: var(--bg-canvas);
+        color: var(--ink-main);
+        overflow-x: hidden;
+    }
+}
+
+@layer components {
+    .font-hand {
+        font-family: 'Kalam', cursive;
+    }
+
+    /* 1. THE CANVAS (Dot Grid) */
+    .bg-dot-grid {
+        background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+        background-size: 24px 24px;
+        background-position: center top;
+    }
+
+    /* 2. THE MARKER (Highlighter Effect) */
+    .marker-highlight {
+        position: relative;
+        z-index: 10;
+        white-space: nowrap;
+    }
+
+    .marker-highlight::before {
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: -2%;
+        width: 104%;
+        height: 85%;
+        background-color: var(--marker-highlight);
+        z-index: -1;
+        transform: rotate(-1.5deg) skewX(-2deg);
+        border-radius: 4px;
+        opacity: 0.7;
+    }
+
+    /* 3. THE PEN (Strike-through) */
+    .pen-strike {
+        position: relative;
+        color: var(--ink-muted);
+    }
+
+    .pen-strike::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -5%;
+        width: 110%;
+        height: 2px;
+        background-color: var(--pen-red);
+        transform: rotate(-2deg);
+        border-radius: 50%;
+    }
+
+    /* 4. THE SKETCH (Organic Borders) */
+    .border-sketch {
+        border: 2px solid var(--ink-main);
+        border-radius: 2px 255px 3px 25px / 255px 5px 225px 15px;
+        transition: all 0.2s ease;
+        background: white;
+        box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .border-sketch:hover {
+        transform: translateY(-2px) rotate(0.5deg);
+        box-shadow: 5px 8px 15px rgba(0,0,0,0.1);
+    }
+    
+    .border-sketch-blue {
+        border: 2px solid #3b82f6;
+        background: #eff6ff;
+        border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    }
+
+    /* Sticky Note Variation */
+    .sticky-note {
+        background: #fffbeb; /* Amber 50 */
+        border: 1px solid #fcd34d;
+        box-shadow: 4px 4px 0px rgba(0,0,0,0.05);
+        transform: rotate(-1deg);
+        transition: transform 0.2s;
+    }
+    .sticky-note:hover {
+        transform: rotate(0deg) scale(1.02);
+        z-index: 10;
+    }
+}
