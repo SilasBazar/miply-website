@@ -2,7 +2,7 @@
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: './',
+  base: '/miply-website/',
   build: {
     outDir: 'dist',
     rollupOptions: {
