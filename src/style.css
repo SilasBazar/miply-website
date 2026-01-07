@@ -4,27 +4,64 @@
 
 @layer base {
     :root {
-        /* Whiteboard Palette */
-        --bg-canvas: #f8fafc;
-        /* Slate 50 */
-        --ink-main: #1e293b;
-        /* Slate 800 */
-        --ink-muted: #64748b;
-        /* Slate 500 */
+        /* ========================================
+           MASTER COLOR PALETTE
+           Edit these to change the entire theme
+           ======================================== */
 
-        --marker-highlight: #fcd34d;
-        /* Amber 300 */
-        --pen-blue: #3b82f6;
-        /* Blue 500 */
-        --pen-red: #ef4444;
-        /* Red 500 */
-        --grid-dot: #cbd5e1;
-        /* Slate 300 */
+        /* PRIMARY COLORS */
+        --color-red: #ef4444;
+        /* All reds: strikethrough, errors, badges */
+        --color-blue: #4381e4;
+        /* All blues: primary accent, links, icons */
+
+        /* YELLOW/AMBER COLORS */
+        --color-yellow-highlight: #fcd34d;
+        /* Yellow for text highlights */
+        --color-yellow-sticky: #fef3c7;
+        /* Yellow for sticky notes */
+
+        /* BACKGROUNDS */
+        --color-bg-page: #FAF7F5;
+        /* Main page background */
+        --color-bg-card: #faf9f6;
+        /* Cards, containers, white elements */
+
+        /* SHARED COLORS (used in multiple places) */
+        --color-dark: #343441;
+        /* Dark color for text AND borders */
+        --color-muted: #64748b;
+        /* Muted color for secondary text */
+
+        /* TEXT COLORS (reference shared colors) */
+        --color-text-primary: var(--color-dark);
+        /* Main headings, dark text */
+        --color-text-secondary: var(--color-muted);
+        /* Body text, muted content */
+
+        /* BORDER COLORS (reference shared colors) */
+        --color-border-dark: var(--color-dark);
+        /* Dark borders */
+        --color-border-light: #e2e8f0;
+        /* Light borders */
+
+        /* GRID & DOTS */
+        --color-grid: #dfd9d2;
+        /* Dot grid pattern */
+
+        /* LEGACY COMPATIBILITY (maps to new system) */
+        --bg-canvas: var(--color-bg-page);
+        --ink-main: var(--color-text-primary);
+        --ink-muted: var(--color-text-secondary);
+        --marker-highlight: var(--color-yellow-highlight);
+        --pen-blue: var(--color-blue);
+        --pen-red: var(--color-red);
+        --grid-dot: var(--color-grid);
     }
 
     body {
-        background-color: var(--bg-canvas);
-        color: var(--ink-main);
+        background-color: var(--color-bg-page);
+        color: var(--color-text-primary);
         overflow-x: hidden;
     }
 }
@@ -36,7 +73,7 @@
 
     /* 1. THE CANVAS (Dot Grid) */
     .bg-dot-grid {
-        background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+        background-image: radial-gradient(var(--color-grid) 1px, transparent 1px);
         background-size: 24px 24px;
         background-position: center top;
     }
@@ -55,7 +92,7 @@
         left: -2%;
         width: 104%;
         height: 85%;
-        background-color: var(--marker-highlight);
+        background-color: var(--color-yellow-highlight);
         z-index: -1;
         transform: rotate(-1.5deg) skewX(-2deg);
         border-radius: 4px;
@@ -65,7 +102,7 @@
     /* 3. THE PEN (Strike-through) */
     .pen-strike {
         position: relative;
-        color: var(--ink-muted);
+        color: var(--color-text-secondary);
     }
 
     .pen-strike::after {
@@ -74,18 +111,18 @@
         top: 50%;
         left: -5%;
         width: 110%;
-        height: 2px;
-        background-color: var(--pen-red);
+        height: 6px;
+        background-color: var(--color-red);
         transform: rotate(-2deg);
         border-radius: 50%;
     }
 
     /* 4. THE SKETCH (Organic Borders) */
     .border-sketch {
-        border: 2px solid var(--ink-main);
+        border: 2px solid var(--color-border-dark);
         border-radius: 2px 255px 3px 25px / 255px 5px 225px 15px;
         transition: all 0.2s ease;
-        background: white;
+        background: var(--color-bg-card);
         box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
     }
 
@@ -94,16 +131,11 @@
         box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .border-sketch-blue {
-        border: 2px solid #3b82f6;
-        background: #eff6ff;
-        border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
-    }
+
 
     /* Sticky Note Variation */
     .sticky-note {
-        background: #fef3c7;
-        /* Consistent yellow - Amber 100 */
+        background: var(--color-yellow-sticky);
         border: none;
         box-shadow:
             0 1px 2px rgba(0, 0, 0, 0.03),
@@ -126,9 +158,40 @@
         left: -10%;
         width: 120%;
         height: 3px;
-        background-color: #2563eb;
-        /* Blue 600 */
+        background-color: var(--color-blue);
         border-radius: 50%;
         transform: rotate(-0.5deg);
+    }
+
+    /* Custom utility classes using CSS variables */
+    .text-theme-blue {
+        color: var(--color-blue);
+    }
+
+    .bg-theme-blue-light {
+        background-color: color-mix(in srgb, var(--color-blue) 10%, white);
+    }
+
+    .border-theme-blue-light {
+        border-color: color-mix(in srgb, var(--color-blue) 20%, white);
+    }
+
+    .hover\:text-theme-blue:hover {
+        color: var(--color-blue);
+    }
+
+    /* Dark text utility */
+    .text-theme-dark {
+        color: var(--color-dark);
+    }
+
+    /* Dark border utility */
+    .border-theme-dark {
+        border-color: var(--color-dark);
+    }
+
+    /* Background utility */
+    .bg-theme-card {
+        background-color: var(--color-bg-card);
     }
 }
