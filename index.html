@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8">
@@ -35,10 +35,10 @@
                 <a href="#platform" class="hover:text-blue-600 transition-colors">Platform</a>
             </div>
 
-            <button
-                class="font-hand font-bold text-lg text-slate-800 px-6 py-2 border-2 border-slate-800 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-amber-300 hover:border-black transition-all transform hover:-rotate-1">
+            <a href="#contact"
+                class="font-hand font-bold text-lg text-slate-800 px-6 py-2 border-2 border-slate-800 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-blue-100 hover:border-black transition-all transform hover:-rotate-1 hover:scale-105 inline-block">
                 Start_Building <i class="fas fa-arrow-right ml-1 text-sm"></i>
-            </button>
+            </a>
         </div>
     </nav>
 
@@ -64,11 +64,11 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <button
-                        class="border-sketch px-8 py-4 text-lg font-bold bg-white text-slate-900 flex items-center justify-center gap-3 group">
+                    <a href="#contact"
+                        class="border-sketch px-8 py-4 text-lg font-bold bg-white text-slate-900 flex items-center justify-center gap-3 group hover:bg-blue-100 transition-all transform hover:-rotate-1 hover:scale-105">
                         Become an MIP
-                        <i class="fas fa-hammer text-amber-500 group-hover:rotate-12 transition-transform"></i>
-                    </button>
+                        <i class="fas fa-hammer text-blue-500 group-hover:rotate-12 transition-transform"></i>
+                    </a>
                 </div>
             </div>
 
@@ -93,12 +93,14 @@
                         </div>
 
                         <div class="flex flex-col items-center relative">
-                            <div class="absolute -top-3 -right-3 text-amber-500 text-2xl animate-bounce">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div
-                                class="w-24 h-24 border-2 border-slate-800 bg-amber-50 rounded flex items-center justify-center text-3xl text-slate-800 shadow-[4px_4px_0px_#000]">
-                                <i class="fas fa-brain"></i>
+                            <div class="relative">
+                                <div class="absolute -top-2 -right-3 text-blue-500 text-2xl animate-bounce">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div
+                                    class="w-24 h-24 border-2 border-slate-800 bg-blue-50 rounded flex items-center justify-center text-3xl text-slate-800 shadow-[4px_4px_0px_#000]">
+                                    <i class="fas fa-brain"></i>
+                                </div>
                             </div>
                             <span
                                 class="font-hand font-bold mt-2 text-slate-800 text-center max-w-[150px] leading-tight">Intelligence
@@ -120,7 +122,7 @@
                 <!-- Left: The Narrative -->
                 <div class="lg:col-span-5 pt-8">
                     <span
-                        class="font-hand text-red-500 text-xl font-bold bg-red-50 px-4 py-1 rounded-full border border-red-100">
+                        class="font-hand text-blue-600 text-xl font-bold bg-blue-50 px-4 py-1 rounded-full border border-blue-100">
                         Why We Are Here
                     </span>
                     <h2 class="text-4xl font-black mt-6 mb-6">The MSP industry is changing.</h2>
@@ -134,20 +136,19 @@
 
                 <!-- Right: The Definition Sketch -->
                 <div class="lg:col-span-7">
-                    <div class="border-sketch p-8 md:p-12 relative bg-[#fffff0]">
+                    <div class="sticky-note p-8 md:p-12 relative">
                         <!-- Tape visual -->
                         <div
                             class="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-slate-200/50 backdrop-blur transform rotate-1">
                         </div>
 
-                        <h3
-                            class="font-hand text-2xl font-bold text-center mb-8 text-blue-600 underline decoration-wavy">
-                            The New Definition
+                        <h3 class="font-hand text-2xl font-bold text-center mb-8 text-blue-600">
+                            <span class="hand-underline">The New Definition</span>
                         </h3>
 
                         <div class="flex flex-col md:flex-row items-center gap-6 justify-center">
                             <div class="text-center">
-                                <span class="font-black text-6xl text-slate-200">M</span>
+                                <span class="font-black text-6xl text-slate-800">M</span>
                                 <div class="font-bold text-slate-800">Managed</div>
                             </div>
                             <div class="text-center">
@@ -155,7 +156,7 @@
                                 <div class="font-bold text-slate-800">Intelligence</div>
                             </div>
                             <div class="text-center">
-                                <span class="font-black text-6xl text-slate-200">P</span>
+                                <span class="font-black text-6xl text-slate-800">P</span>
                                 <div class="font-bold text-slate-800">Provider</div>
                             </div>
                         </div>
@@ -174,12 +175,7 @@
 
     <!-- SECTION 2: HOW WE DO IT (The Blueprint Journey) -->
     <section id="blueprint" class="py-24 border-t border-slate-200 relative">
-        <!-- Background scribble -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <svg class="w-full h-full opacity-5" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0,50 Q25,0 50,50 T100,50" stroke="black" stroke-width="0.5" fill="none" />
-            </svg>
-        </div>
+
 
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -201,9 +197,10 @@
                         class="w-24 h-24 mx-auto bg-white border-2 border-slate-800 rounded-full flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                         <span class="text-blue-500"><i class="fas fa-user-astronaut"></i></span>
                     </div>
-                    <div class="bg-white border-sketch p-8 text-center h-full">
-                        <h3 class="font-bold text-xl mb-3">The Sidekick</h3>
-                        <p class="text-slate-600 text-sm">
+                    <div
+                        class="bg-white border-2 border-slate-800 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] p-4 text-center h-full shadow-md">
+                        <h3 class="font-bold text-2xl mb-3">The Sidekick</h3>
+                        <p class="text-slate-600 text-base">
                             MIPLY helps MSPs make the shift to an MIP <span
                                 class="marker-highlight px-1">deliberately</span>, responsibly, and profitably.
                         </p>
@@ -216,13 +213,14 @@
                         class="w-24 h-24 mx-auto bg-white border-2 border-slate-800 rounded-full flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                         <span class="text-red-500"><i class="fas fa-ban"></i></span>
                     </div>
-                    <div class="bg-white border-sketch p-8 text-center h-full relative">
+                    <div
+                        class="bg-white border-2 border-slate-800 rounded-[15px_255px_15px_225px/225px_15px_255px_15px] p-4 text-center h-full relative shadow-md">
                         <!-- Badge -->
                         <div
                             class="absolute -top-3 right-4 bg-red-100 text-red-600 text-[10px] font-bold px-2 py-1 rounded border border-red-200 uppercase tracking-wide">
                             Anti-Vendor</div>
-                        <h3 class="font-bold text-xl mb-3">Not A Vendor</h3>
-                        <p class="text-slate-600 text-sm">
+                        <h3 class="font-bold text-2xl mb-3">Not A Vendor</h3>
+                        <p class="text-slate-600 text-base">
                             This is neither a training library nor trend-chasing; it's about building trust and creating
                             real margins.
                         </p>
@@ -233,11 +231,12 @@
                 <div class="relative z-10 group">
                     <div
                         class="w-24 h-24 mx-auto bg-white border-2 border-slate-800 rounded-full flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <span class="text-green-500"><i class="fas fa-key"></i></span>
+                        <span class="text-blue-500"><i class="fas fa-key"></i></span>
                     </div>
-                    <div class="bg-white border-sketch p-8 text-center h-full">
-                        <h3 class="font-bold text-xl mb-3">Own The Capability</h3>
-                        <p class="text-slate-600 text-sm">
+                    <div
+                        class="bg-white border-2 border-slate-800 rounded-[225px_15px_255px_25px/15px_255px_25px_225px] p-4 text-center h-full shadow-md">
+                        <h3 class="font-bold text-2xl mb-3">Own The Capability</h3>
+                        <p class="text-slate-600 text-base">
                             We build tools <strong>with</strong> you, transfer ownership, and boom, meet the new you.
                             You design, operate, and monetize intelligence.
                         </p>
@@ -253,8 +252,7 @@
         <div class="max-w-4xl mx-auto px-4 relative z-10">
 
             <!-- Big Sticky Note Container -->
-            <div
-                class="p-12 bg-[#fffbeb] border-2 border-[#fcd34d] shadow-[8px_8px_0px_rgba(0,0,0,0.05)] transform rotate-1 relative overflow-hidden text-center transition-transform hover:scale-[1.01] duration-300">
+            <div class="sticky-note p-12 relative overflow-hidden text-center">
                 <!-- Decorative corner doodle -->
                 <div class="absolute -top-6 -right-6 w-24 h-24 bg-yellow-100 rounded-full z-0 opacity-50"></div>
                 <div
@@ -263,10 +261,9 @@
 
                 <div class="relative z-10">
                     <!-- Restored System Access Title -->
-                    <span
-                        class="inline-block font-hand font-bold text-blue-600 text-lg mb-4 transform -rotate-2 border-b-2 border-blue-200 pb-1">
-                        System Access
-                    </span>
+                    <h3 class="font-hand text-2xl font-bold text-center mb-8 text-blue-600">
+                        <span class="hand-underline">System Access</span>
+                    </h3>
 
                     <h2 class="text-5xl font-black mb-6 text-slate-900">The MIPLY Platform</h2>
 
@@ -277,26 +274,24 @@
                     </p>
 
                     <!-- Silly Drawing Button -->
-                    <button
-                        class="group relative inline-block focus:outline-none transform rotate-1 hover:rotate-2 transition-transform duration-200">
+                    <a href="#contact"
+                        class="group relative inline-block focus:outline-none transform rotate-1 hover:rotate-2 transition-all hover:scale-105">
                         <!-- Main Button Blob -->
                         <span
-                            class="relative inline-block border-2 border-slate-900 bg-white px-10 py-5 text-2xl font-black text-slate-900 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] font-hand group-hover:scale-105 transition-transform">
+                            class="relative inline-block border-2 border-slate-900 bg-white px-10 py-5 text-2xl font-black text-slate-900 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] font-hand group-hover:bg-blue-100 transition-all">
                             Get More Info <i
                                 class="fas fa-pencil-alt ml-2 group-hover:rotate-12 transition-transform"></i>
                         </span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Background grid hint -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none"
-            style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 30px 30px;"></div>
+
     </section>
 
-    <!-- ORIGINAL FOOTER (Restored) -->
-    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+    <!-- CONTACT SECTION -->
+    <footer id="contact" class="bg-white border-t border-slate-200 pt-16 pb-8 relative">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 mb-16">
                 <div>
@@ -305,11 +300,11 @@
                         Let's sketch out where you are, what you’re trying to solve, and see if the MIP blueprint fits
                         your business.
                     </p>
-                    <div class="flex gap-2 max-w-md">
+                    <div id="contact-form" class="flex gap-2 max-w-md">
                         <input type="email" placeholder="enter_email..."
-                            class="flex-grow bg-slate-50 border-2 border-slate-200 rounded px-4 py-3 font-mono text-sm focus:border-blue-400 focus:outline-none">
+                            class="flex-grow bg-slate-50 border-2 border-slate-200 rounded px-4 py-3 font-hand text-sm focus:border-blue-400 focus:outline-none">
                         <button
-                            class="bg-slate-900 text-white font-bold px-6 py-3 rounded hover:bg-amber-400 hover:text-slate-900 transition-colors">
+                            class="font-hand font-bold text-lg text-slate-800 px-6 py-3 border-2 border-slate-800 bg-white rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-blue-100 hover:border-black transition-all transform hover:scale-105">
                             Apply
                         </button>
                     </div>
