@@ -10,7 +10,7 @@
            ======================================== */
 
         /* PRIMARY COLORS */
-        --color-red: #ef4444;
+        --color-red: #f35858;
         /* All reds: strikethrough, errors, badges */
         --color-blue: #4381e4;
         /* All blues: primary accent, links, icons */
@@ -46,7 +46,7 @@
         /* Light borders */
 
         /* GRID & DOTS */
-        --color-grid: #dfd9d2;
+        --color-grid: #e4dacb;
         /* Dot grid pattern */
 
         /* LEGACY COMPATIBILITY (maps to new system) */
