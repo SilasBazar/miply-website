@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Guild // MIPLY</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Kalam:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="bg-dot-grid min-h-screen flex flex-col selection:bg-amber-200 selection:text-slate-900">
+
+    <!-- NAV BAR -->
+    <nav class="fixed top-0 w-full z-50 bg-[#f8fafc]/90 backdrop-blur-sm border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-16 w-auto">
+            </div>
+
+            <div class="hidden md:flex gap-8 font-medium text-slate-600 text-sm">
+                <a href="/" class="hover:text-theme-blue transition-colors">Home</a>
+                <a href="/miply-website/what-is-mip.html" class="hover:text-theme-blue transition-colors">What Is a MIP</a>
+                <a href="/miply-website/guild.html" class="hover:text-theme-blue transition-colors">The Guild</a>
+                <a href="/miply-website/build-log.html" class="hover:text-theme-blue transition-colors">Build Log</a>
+                <a href="/miply-website/join.html" class="hover:text-theme-blue transition-colors">Join</a>
+            </div>
+
+            <a href="/miply-website/join.html"
+                class="font-hand font-bold text-lg text-theme-dark px-6 py-2 border-2 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-theme-blue-light transition-all transform hover:-rotate-1 hover:scale-105 inline-block">
+                Apply <i class="fas fa-arrow-right ml-1 text-sm"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
+                <i class="fas fa-pen-fancy"></i> Start Your Transformation
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-theme-dark leading-[1.1] mb-8">
+                <span class="marker-highlight inline-block transform -rotate-1 px-2">Join the Guild</span>
+            </h1>
+            <p class="text-xl text-slate-600 mb-8 leading-relaxed max-w-3xl">
+                Apply to become a Member of the Guild. Limited spots available. We're selective about who we let in.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 max-w-xl">
+                <a href="#apply"
+                    class="sketch-card border-sketch-10 px-8 py-4 text-lg font-bold bg-white text-theme-dark flex items-center justify-center gap-3 group hover:scale-105">
+                    Submit Application <i class="fas fa-paper-plane text-theme-blue group-hover:rotate-12 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- WHO MIPLY IS FOR -->
+    <section class="py-20 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-1">
+                    <i class="fas fa-user-plus"></i> Perfect Fit
+                </span>
+                <h2 class="text-4xl font-black text-theme-dark">Who MIPLY Is For</h2>
+                <p class="text-xl text-slate-600 mt-4">We're looking for specific types of MSPs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="sketch-card border-sketch-1 p-8">
+                    <div class="w-16 h-16 mx-auto bg-theme-blue-light rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-arrow-down text-2xl text-theme-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-theme-dark mb-4">MSPs Feeling Commoditized</h3>
+                    <p class="text-slate-600">
+                        You're stuck providing the same basic services everyone else offers. Clients see you as a commodity,
+                        and margins are flat. You want out.
+                    </p>
+                </div>
+
+                <div class="sketch-card border-sketch-2 p-8">
+                    <div class="w-16 h-16 mx-auto bg-theme-blue-light rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-theme-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-theme-dark mb-4">Leaders Seeking Higher-Value Services</h3>
+                    <p class="text-slate-600">
+                        You're tired of the "fix-it" model and want to build services that justify higher margins and
+                        better client relationships.
+                    </p>
+                </div>
+
+                <div class="sketch-card border-sketch-3 p-8">
+                    <div class="w-16 h-16 mx-auto bg-theme-blue-light rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-2xl text-theme-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-theme-dark mb-4">Teams Ready to Build Intelligence Capability</h3>
+                    <p class="text-slate-600">
+                        You understand AI, automation, and data are the future. You're ready to invest in building real
+                        expertise that compounds over time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTICIPATION EXPECTATIONS -->
+    <section class="py-20 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
+                    <i class="fas fa-clipboard-check"></i> Commitment Required
+                </span>
+                <h2 class="text-4xl font-black text-theme-dark">What Participation Looks Like</h2>
+            </div>
+
+            <div class="sketch-card border-sketch-4 p-12 relative overflow-hidden bg-theme-blue-light/10">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-theme-blue/5 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
+                <div class="relative z-10">
+                    <h3 class="text-3xl font-black text-theme-dark mb-8">Your Engagement Expectations</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-theme-dark mb-4">Biweekly Peer Groups</h4>
+                            <p class="text-slate-600 mb-4">
+                                Join small groups of peers to discuss challenges, share progress, and get feedback. Expect
+                                90 minutes of focused, actionable discussion.
+                            </p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li><i class="fas fa-check text-theme-blue mr-2"></i>Two sessions per month</li>
+                                <li><i class="fas fa-check text-theme-blue mr-2"></i>Prepared discussion topics</li>
+                                <li><i class="fas fa-check text-theme-blue mr-2"></i>Action items and accountability</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-theme-dark mb-4">Build Lab Participation</h4>
+                            <p class="text-slate-600 mb-4">
+                                Spend dedicated time building intelligence services with Guild mentors. This is where
+                                real capability is built.
+                            </p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li><i class="fas fa-check text-theme-blue mr-2"></i>Monthly sprints</li>
+                                <li><i class="fas fa-check text-theme-blue mr-2"></i>Code reviews and feedback</li>
+                                <li><i class="fas fa-check text-theme-blue mr-2"></i>Real-world projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT MEMBERS GAIN -->
+    <section class="py-20 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-1">
+                    <i class="fas fa-gift"></i> What You'll Get
+                </span>
+                <h2 class="text-4xl font-black text-theme-dark">What Members Gain</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="sketch-card border-sketch-5 p-8">
+                    <div class="w-16 h-16 mx-auto bg-theme-blue-light rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-2xl text-theme-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-theme-dark mb-4">Stronger Client Relationships</h3>
+                    <p class="text-slate-600">
+                        Deliver outcomes that clients actually pay for. Move from transactional relationships to
+                        strategic partnerships.
+                    </p>
+                </div>
+
+                <div class="sketch-card border-sketch-6 p-8">
+                    <div class="w-16 h-16 mx-auto bg-theme-blue-light rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-dollar-sign text-2xl text-theme-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-theme-dark mb-4">New Revenue Pathways</h3>
+                    <p class="text-slate-600">
+                        Build intelligence services that command premium pricing. Turn your technical expertise into
+                        recurring revenue streams.
+                    </p>
+                </div>
+
+                <div class="sketch-card border-sketch-7 p-8">
+                    <div class="w-16 h-16 mx-auto bg-theme-blue-light rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-2xl text-theme-blue"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-theme-dark mb-4">Internal Capability That Compounds</h3>
+                    <p class="text-slate-600">
+                        Develop skills that make your entire organization more valuable. Build expertise that grows
+                        over time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
+                    <i class="fas fa-question-circle"></i> Common Questions
+                </span>
+                <h2 class="text-4xl font-black text-theme-dark">FAQ</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="faq-item sketch-card border-sketch-1 p-6">
+                    <button class="faq-toggle w-full text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                        <span class="font-bold text-xl text-theme-dark">Do we need AI expertise already?</span>
+                        <i class="fas fa-chevron-down text-theme-blue transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-slate-600">
+                        Not necessarily. We welcome MSPs who understand AI is the future but haven't built it yet. The
+                        Guild is designed to help you build that expertise. However, you do need to be willing to learn
+                        and implement.
+                    </div>
+                </div>
+
+                <div class="faq-item sketch-card border-sketch-2 p-6">
+                    <button class="faq-toggle w-full text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                        <span class="font-bold text-xl text-theme-dark">Are we too small to join?</span>
+                        <i class="fas fa-chevron-down text-theme-blue transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-slate-600">
+                        Size isn't the main factor. What matters most is your mindset and your willingness to build
+                        intelligence-driven services. If you're 10-50 employees and growing, you might fit. If you're
+                        under 10, the Guild might not be the right fit yet.
+                    </div>
+                </div>
+
+                <div class="faq-item sketch-card border-sketch-3 p-6">
+                    <button class="faq-toggle w-full text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                        <span class="font-bold text-xl text-theme-dark">How much time is required?</span>
+                        <i class="fas fa-chevron-down text-theme-blue transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-slate-600">
+                        Expect 4-6 hours per week minimum: 2 hours for peer groups, 2-4 hours for build lab work,
+                        plus ongoing learning and implementation. This is a serious commitment to building real
+                        capability.
+                    </div>
+                </div>
+
+                <div class="faq-item sketch-card border-sketch-4 p-6">
+                    <button class="faq-toggle w-full text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                        <span class="font-bold text-xl text-theme-dark">What's the investment?</span>
+                        <i class="fas fa-chevron-down text-theme-blue transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-slate-600">
+                        Details are in our member handbook, but we focus on ROI over pricing. If you're serious about
+                        building intelligence services and can demonstrate readiness, we'll discuss terms that make sense
+                        for your business.
+                    </div>
+                </div>
+
+                <div class="faq-item sketch-card border-sketch-5 p-6">
+                    <button class="faq-toggle w-full text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                        <span class="font-bold text-xl text-theme-dark">What happens after we apply?</span>
+                        <i class="fas fa-chevron-down text-theme-blue transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-slate-600">
+                        We review applications on a rolling basis. If we see a fit, we'll schedule a strategy call to
+                        discuss your specific situation and whether the Guild is right for you. No pressure, just a
+                        conversation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATION FORM SECTION -->
+    <section id="apply" class="py-20 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="sticky-note p-12 relative overflow-hidden">
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-yellow-100 rounded-full z-0 opacity-50"></div>
+                <div class="absolute bottom-4 left-4 text-yellow-500 text-9xl font-black opacity-10 pointer-events-none z-0 transform -rotate-12">APPLY</div>
+                <div class="relative z-10">
+                    <h2 class="text-5xl font-black mb-6 text-theme-dark">Ready to Apply?</h2>
+                    <p class="text-xl text-slate-600 mb-8 max-w-2xl">
+                        Fill out the form below to start the application process. We'll review your submission and
+                        get back to you within 5 business days.
+                    </p>
+
+                    <form id="application-form" class="space-y-6">
+                        <div>
+                            <label class="block font-bold text-lg text-theme-dark mb-2">Full Name</label>
+                            <input type="text" placeholder="Your Name" required
+                                class="w-full bg-slate-50 border-2 border-slate-200 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] px-4 py-3 font-hand text-lg focus:border-theme-blue focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-lg text-theme-dark mb-2">Email Address</label>
+                            <input type="email" placeholder="your@email.com" required
+                                class="w-full bg-slate-50 border-2 border-slate-200 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] px-4 py-3 font-hand text-lg focus:border-theme-blue focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-lg text-theme-dark mb-2">Company Name</label>
+                            <input type="text" placeholder="Your MSP/Company" required
+                                class="w-full bg-slate-50 border-2 border-slate-200 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] px-4 py-3 font-hand text-lg focus:border-theme-blue focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-lg text-theme-dark mb-2">Company Size</label>
+                            <select required
+                                class="w-full bg-slate-50 border-2 border-slate-200 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] px-4 py-3 font-hand text-lg focus:border-theme-blue focus:outline-none">
+                                <option value="">Select company size</option>
+                                <option value="1-10">1-10 employees</option>
+                                <option value="11-50">11-50 employees</option>
+                                <option value="51-100">51-100 employees</option>
+                                <option value="100+">100+ employees</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-lg text-theme-dark mb-2">Current Situation</label>
+                            <textarea rows="4" placeholder="Tell us about your MSP and what you're looking to achieve..." required
+                                class="w-full bg-slate-50 border-2 border-slate-200 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] px-4 py-3 font-hand text-lg focus:border-theme-blue focus:outline-none"></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block font-bold text-lg text-theme-dark mb-2">
+                                <input type="checkbox" required class="mr-2">
+                                I understand that the Guild requires 4-6 hours per week of engagement
+                            </label>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full font-hand font-bold text-2xl text-theme-dark px-8 py-5 border-2 border-theme-dark bg-white rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-theme-blue-light hover:border-theme-dark transition-all transform hover:scale-105">
+                            Submit Application <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-theme-card border-t border-slate-200 pt-16 pb-8 relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h2 class="text-4xl font-black mb-6">Ready to grab the marker?</h2>
+                    <p class="text-slate-500 mb-8 max-w-sm">
+                        Let's sketch out where you are, what you're trying to solve, and see if the MIP blueprint fits your business.
+                    </p>
+                    <div id="contact-form" class="flex gap-2 max-w-md">
+                        <input type="email" placeholder="enter_email..."
+                            class="flex-grow bg-slate-50 border-2 border-slate-200 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] px-4 py-3 font-hand text-sm focus:border-theme-blue focus:outline-none">
+                        <button
+                            class="font-hand font-bold text-lg text-theme-dark px-6 py-3 border-2 border-theme-dark bg-white rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-theme-blue-light hover:border-theme-dark transition-all transform hover:scale-105"
+                            onclick="handleFormSubmit(this)">
+                            Apply
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8 text-sm">
+                    <div>
+                        <h4 class="font-bold mb-4 uppercase text-xs tracking-wider text-slate-400">Explore</h4>
+                        <ul class="space-y-3 font-medium text-slate-600">
+                            <li><a href="/" class="hover:text-theme-blue">Home</a></li>
+                            <li><a href="/miply-website/what-is-mip.html" class="hover:text-theme-blue">What Is a MIP</a></li>
+                            <li><a href="/miply-website/guild.html" class="hover:text-theme-blue">The Guild Experience</a></li>
+                            <li><a href="/miply-website/build-log.html" class="hover:text-theme-blue">Case Studies</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 uppercase text-xs tracking-wider text-slate-400">Legal</h4>
+                        <ul class="space-y-3 font-medium text-slate-600">
+                            <li><a href="#" class="hover:text-theme-blue">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-theme-blue">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
+                <div class="font-mono">
+                    &copy; 2026 MIPLY SYSTEMS.
+                </div>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-slate-600"><i class="fab fa-twitter text-lg"></i></a>
+                    <a href="#" class="hover:text-slate-600"><i class="fab fa-linkedin text-lg"></i></a>
+                    <a href="#" class="hover:text-slate-600"><i class="fab fa-github text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Function
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            icon.style.transform = content.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        // Application Form Handler
+        document.getElementById('application-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            // Show loading state
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check"></i> Application Received!';
+                button.style.backgroundColor = '#fef3c7';
+                button.style.borderColor = '#fcd34d';
+                
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    button.style.backgroundColor = '';
+                    button.style.borderColor = '';
+                    this.reset();
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+
+</body>
+
+</html>

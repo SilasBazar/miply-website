@@ -77,15 +77,15 @@ function drawCircleHighlight(element) {
     // Create gradient stops for opacity fade
     const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
     stop1.setAttribute('offset', '0%');
-    stop1.setAttribute('style', 'stop-color:#3b82f6;stop-opacity:0.3');
+    stop1.setAttribute('style', 'stop-color:#4381e4;stop-opacity:0.3');
 
     const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
     stop2.setAttribute('offset', '50%');
-    stop2.setAttribute('style', 'stop-color:#3b82f6;stop-opacity:0.9');
+    stop2.setAttribute('style', 'stop-color:#4381e4;stop-opacity:0.9');
 
     const stop3 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
     stop3.setAttribute('offset', '100%');
-    stop3.setAttribute('style', 'stop-color:#3b82f6;stop-opacity:0.3');
+    stop3.setAttribute('style', 'stop-color:#4381e4;stop-opacity:0.3');
 
     gradient.appendChild(stop1);
     gradient.appendChild(stop2);
@@ -130,7 +130,7 @@ function drawCircleHighlight(element) {
     path.setAttribute('fill', 'none');
     path.setAttribute('stroke', 'url(#underline-gradient)');
     path.setAttribute('stroke-linecap', 'round');
-    path.setAttribute('stroke-linejoin', 'round');
+    path.setAttribute('stroke-join', 'round');
 
     // Variable stroke width - thicker in middle, thinner at ends
     const strokeWidthValues = [];
@@ -170,4 +170,39 @@ function drawCircleHighlight(element) {
             svg.remove();
         }, 2600);
     }, 50);
+}
+
+// Form submission handler (visual only - placeholder)
+function handleFormSubmit(button) {
+    const form = button.closest('#contact-form');
+    const emailInput = form.querySelector('input');
+    
+    if (emailInput.value && emailInput.value.includes('@')) {
+        // Show loading state
+        const originalText = button.textContent;
+        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Applying...';
+        button.disabled = true;
+        
+        // Simulate API call
+        setTimeout(() => {
+            button.innerHTML = '<i class="fas fa-check"></i> Applied!';
+            button.style.backgroundColor = '#fef3c7'; // Sticky yellow
+            button.style.borderColor = '#fcd34d';
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.disabled = false;
+                button.style.backgroundColor = '';
+                button.style.borderColor = '';
+                emailInput.value = '';
+            }, 3000);
+        }, 1500);
+    } else {
+        // Visual feedback for invalid email
+        emailInput.style.borderColor = '#f35858';
+        setTimeout(() => {
+            emailInput.style.borderColor = '';
+        }, 2000);
+    }
 }

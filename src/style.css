@@ -131,7 +131,63 @@
         box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.1);
     }
 
+    /* Base sketch card class */
+    .sketch-card {
+        border: 2px solid var(--color-dark);
+        background: var(--color-bg-card);
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s ease;
+    }
 
+    .sketch-card:hover {
+        transform: translateY(-2px) rotate(0.5deg);
+        box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Existing sketch card shape (The Sidekick card) */
+    .border-sketch-1 { 
+        border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; 
+    }
+
+    /* Existing sketch card shape (Not A Vendor card) */
+    .border-sketch-2 { 
+        border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px; 
+    }
+
+    /* Existing sketch card shape (Own The Capability card) */
+    .border-sketch-3 { 
+        border-radius: 225px 15px 255px 25px / 15px 255px 25px 225px; 
+    }
+
+    /* Existing sketch card shape (from .border-sketch class) */
+    .border-sketch-4 { 
+        border-radius: 2px 255px 3px 25px / 255px 5px 225px 15px; 
+    }
+
+    /* NEW SKETCH CARD VARIATIONS */
+    .border-sketch-5 { 
+        border-radius: 12px 240px 18px 22px / 240px 12px 235px 16px; 
+    }
+
+    .border-sketch-6 { 
+        border-radius: 20px 235px 16px 28px / 235px 18px 240px 20px; 
+    }
+
+    .border-sketch-7 { 
+        border-radius: 18px 242px 14px 30px / 242px 14px 238px 18px; 
+    }
+
+    .border-sketch-8 { 
+        border-radius: 25px 230px 20px 35px / 230px 25px 245px 22px; 
+    }
+
+    .border-sketch-9 { 
+        border-radius: 10px 245px 15px 20px / 245px 10px 240px 15px; 
+    }
+
+    .border-sketch-10 { 
+        border-radius: 22px 238px 18px 32px / 238px 20px 242px 24px; 
+    }
 
     /* Sticky Note Variation */
     .sticky-note {

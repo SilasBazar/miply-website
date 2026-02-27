@@ -2,7 +2,12 @@
 export default {
     content: [
         "./index.html",
+        "./what-is-mip.html",
+        "./guild.html",
+        "./build-log.html",
+        "./join.html",
         "./src/**/*.{js,ts,jsx,tsx}",
+        "./src/style.css",
     ],
     theme: {
         extend: {
