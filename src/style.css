@@ -219,6 +219,23 @@
         transform: rotate(-0.5deg);
     }
 
+    .hand-underline-red {
+        position: relative;
+        display: inline-block;
+    }
+
+    .hand-underline-red::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: -10%;
+        width: 120%;
+        height: 3px;
+        background-color: var(--color-red);
+        border-radius: 50%;
+        transform: rotate(-0.5deg);
+    }
+
     /* Custom utility classes using CSS variables */
     .text-theme-blue {
         color: var(--color-blue);
