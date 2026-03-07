@@ -13,10 +13,10 @@
     <script type="module" src="/src/main.js"></script>
 </head>
 
-<body class="bg-dot-grid min-h-screen flex flex-col selection:bg-amber-200 selection:text-slate-900">
+<body class="bg-theme-page min-h-screen flex flex-col selection:bg-amber-200 selection:text-slate-900">
 
     <!-- NAV BAR -->
-    <nav class="fixed top-0 w-full z-50 bg-[#f8fafc]/90 backdrop-blur-sm border-b border-slate-200/50">
+    <nav class="fixed top-0 w-full z-50 bg-theme-page/90 backdrop-blur-sm border-b border-slate-200/50">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center">
                 <img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-40 w-auto">
@@ -39,7 +39,7 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="pt-32 pb-20 px-4">
+    <header class="pt-32 pb-20 px-4 bg-dot-grid">
         <div class="max-w-7xl mx-auto">
             <div class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
                 <i class="fas fa-question-circle"></i> The Future of MSP
@@ -53,9 +53,8 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 max-w-xl">
                 <a href="/miply-website/guild.html"
-                    class="sketch-card border-sketch-2 px-8 py-4 text-lg font-bold bg-white text-theme-dark flex items-center justify-center gap-3 group hover:scale-105">
-                    Join the Guild <i
-                        class="fas fa-graduation-cap text-theme-blue group-hover:rotate-12 transition-transform"></i>
+                    class="sketch-button px-8 py-4 text-lg font-bold flex items-center justify-center gap-3 group">
+                    Join the Guild <i class="fas fa-graduation-cap group-hover:rotate-12 transition-transform"></i>
                 </a>
             </div>
         </div>
@@ -137,7 +136,7 @@
     </section>
 
     <!-- VISUAL BREAK -->
-    <div class="py-8 border-t border-slate-200">
+    <div class="py-8 border-t border-slate-200 bg-dot-grid">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <div
                 class="font-hand text-theme-blue text-2xl font-bold transform -rotate-1 inline-flex items-center gap-3">
@@ -148,7 +147,7 @@
     </div>
 
     <!-- THE SOLUTION -->
-    <section class="py-20 border-t border-slate-200">
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
@@ -235,7 +234,7 @@
             <div class="flex justify-center mb-20 relative">
                 <div class="absolute left-1/2 -ml-px w-px h-16 bg-theme-blue-light/50 -top-10"></div>
                 <div
-                    class="bg-white px-8 py-5 border-2 border-theme-dark rounded-full shadow-[4px_4px_0_0_rgba(52,52,65,1)] transform -rotate-1 z-10 hover:translate-y-px hover:translate-x-px hover:shadow-[3px_3px_0_0_rgba(52,52,65,1)] transition-all cursor-default">
+                    class="bg-theme-card px-8 py-5 border-2 border-theme-dark rounded-full transform -rotate-1 z-10 hover:translate-y-px hover:translate-x-px transition-all cursor-default">
                     <p class="font-hand text-xl text-theme-dark text-center font-bold">
                         These aren't just metrics — they're what <span class="marker-highlight px-2">clients actually
                             pay for</span>.
@@ -273,7 +272,7 @@
     </section>
 
     <!-- THE TECH STACK -->
-    <section class="py-20 border-t border-slate-200 bg-theme-card">
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
@@ -287,9 +286,9 @@
                 <div class="grid md:grid-cols-3 gap-8 items-start relative">
                     <!-- Data Container -->
                     <div
-                        class="text-center group p-8 rounded-3xl hover:bg-white/50 transition-colors border border-transparent hover:border-slate-200">
+                        class="text-center group p-8 rounded-3xl transition-colors border border-transparent hover:border-slate-200">
                         <div
-                            class="w-20 h-20 mx-auto border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center mb-6 bg-white transform group-hover:-rotate-3 transition-transform">
+                            class="w-20 h-20 mx-auto border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center mb-6 bg-theme-card transform group-hover:-rotate-3 transition-transform">
                             <i class="fas fa-database text-3xl text-theme-dark"></i>
                         </div>
                         <h3
@@ -302,9 +301,9 @@
 
                     <!-- Automation Container -->
                     <div
-                        class="text-center group p-8 rounded-3xl hover:bg-white/50 transition-colors border border-transparent hover:border-slate-200">
+                        class="text-center group p-8 rounded-3xl transition-colors border border-transparent hover:border-slate-200">
                         <div
-                            class="w-20 h-20 mx-auto border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center mb-6 bg-white transform group-hover:rotate-3 transition-transform">
+                            class="w-20 h-20 mx-auto border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center mb-6 bg-theme-card transform group-hover:rotate-3 transition-transform">
                             <i class="fas fa-cogs text-3xl text-theme-dark"></i>
                         </div>
                         <h3
@@ -317,9 +316,9 @@
 
                     <!-- AI Container -->
                     <div
-                        class="text-center group p-8 rounded-3xl hover:bg-white/50 transition-colors border border-transparent hover:border-slate-200">
+                        class="text-center group p-8 rounded-3xl transition-colors border border-transparent hover:border-slate-200">
                         <div
-                            class="w-20 h-20 mx-auto border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center mb-6 bg-white transform group-hover:-rotate-3 transition-transform">
+                            class="w-20 h-20 mx-auto border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center mb-6 bg-theme-card transform group-hover:-rotate-3 transition-transform">
                             <i class="fas fa-brain text-3xl text-theme-dark"></i>
                         </div>
                         <h3
@@ -346,7 +345,7 @@
                         =</div>
 
                     <div
-                        class="bg-white/80 backdrop-blur-sm border-2 border-theme-dark p-10 rounded-3xl text-center max-w-2xl transform hover:scale-105 transition-transform shadow-[8px_8px_0_0_rgba(52,52,65,1)]">
+                        class="bg-theme-card/80 backdrop-blur-sm border-2 border-theme-dark p-10 rounded-3xl text-center max-w-2xl transform hover:scale-105 transition-transform">
                         <div class="text-3xl lg:text-4xl font-hand font-extrabold text-theme-dark mb-4">Results</div>
                         <p class="text-lg text-slate-600">
                             Measurable business outcomes that justify <span
@@ -360,7 +359,7 @@
     </section>
 
     <!-- WHY THIS MATTERS -->
-    <section class="py-20 border-t border-slate-200">
+    <section class="py-20 border-t border-slate-200 bg-theme-card">
         <div class="max-w-7xl mx-auto px-4">
             <div class="sketch-card border-sketch-4 p-12 bg-theme-blue-light/10">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -380,7 +379,7 @@
                     </div>
                     <div class="flex justify-center">
                         <div
-                            class="w-56 h-56 border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center bg-white transform -rotate-2 shadow-lg">
+                            class="w-56 h-56 border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center bg-theme-card transform -rotate-2">
                             <div class="text-center">
                                 <div class="text-6xl font-black text-theme-dark mb-2">5x</div>
                                 <div class="text-theme-blue font-bold text-xl">Faster Growth</div>
@@ -393,7 +392,7 @@
     </section>
 
     <!-- CTA SECTION -->
-    <section class="py-20 border-t border-slate-200 bg-theme-card">
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
         <div class="max-w-4xl mx-auto px-4">
             <div class="sticky-note p-12 relative overflow-hidden text-center">
                 <div class="absolute -top-6 -right-6 w-24 h-24 bg-yellow-100 rounded-full z-0 opacity-50"></div>
@@ -404,8 +403,9 @@
                         <span class="marker-highlight px-1 transform -rotate-1 inline-block">compounds over time</span>.
                     </p>
                     <a href="/miply-website/join.html"
-                        class="inline-block border-2 border-theme-dark bg-white px-10 py-5 text-2xl font-black text-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] font-hand hover:bg-theme-blue-light transition-all transform hover:rotate-1 hover:scale-105">
-                        Start Your Transformation <i class="fas fa-arrow-right ml-2"></i>
+                        class="sketch-button inline-block px-10 py-5 text-2xl font-black flex items-center justify-center gap-2 max-w-max mx-auto">
+                        Start Your Transformation <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
@@ -425,9 +425,7 @@
                     <div id="contact-form" class="flex gap-2 max-w-md">
                         <input type="email" placeholder="enter_email..."
                             class="flex-grow bg-slate-50 border-2 border-slate-200 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] px-4 py-3 font-hand text-sm focus:border-theme-blue focus:outline-none">
-                        <button
-                            class="font-hand font-bold text-lg text-theme-dark px-6 py-3 border-2 border-theme-dark bg-white rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-theme-blue-light hover:border-theme-dark transition-all transform hover:scale-105"
-                            onclick="handleFormSubmit(this)">
+                        <button class="sketch-button font-bold text-lg px-6 py-3" onclick="handleFormSubmit(this)">
                             Apply
                         </button>
                     </div>

@@ -13,10 +13,10 @@
     <script type="module" src="/src/main.js"></script>
 </head>
 
-<body class="bg-dot-grid min-h-screen flex flex-col selection:bg-amber-200 selection:text-slate-900">
+<body class="bg-theme-page min-h-screen flex flex-col selection:bg-amber-200 selection:text-slate-900">
 
     <!-- NAV BAR -->
-    <nav class="fixed top-0 w-full z-50 bg-[#f8fafc]/90 backdrop-blur-sm border-b border-slate-200/50">
+    <nav class="fixed top-0 w-full z-50 bg-theme-page/90 backdrop-blur-sm border-b border-slate-200/50">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center">
                 <img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-40 w-auto">
@@ -39,7 +39,7 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="pt-32 pb-20 px-4">
+    <header class="pt-32 pb-20 px-4 bg-dot-grid">
         <div class="max-w-7xl mx-auto">
             <div class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
                 <i class="fas fa-users"></i> Build Together
@@ -52,9 +52,8 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 max-w-xl">
                 <a href="/miply-website/build-log.html"
-                    class="sketch-card border-sketch-6 px-8 py-4 text-lg font-bold bg-white text-theme-dark flex items-center justify-center gap-3 group hover:scale-105">
-                    See What's Built <i
-                        class="fas fa-folder-open text-theme-blue group-hover:rotate-12 transition-transform"></i>
+                    class="sketch-button px-8 py-4 text-lg font-bold flex items-center justify-center gap-3 group">
+                    See What's Built <i class="fas fa-folder-open group-hover:rotate-12 transition-transform"></i>
                 </a>
             </div>
         </div>
@@ -80,7 +79,7 @@
                     </p>
                     <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto w-full text-left">
                         <div
-                            class="bg-white p-10 rounded-3xl border border-slate-200/60 shadow-lg shadow-slate-200/30 transform transition-transform hover:-translate-y-1 cursor-default">
+                            class="bg-theme-card p-10 rounded-3xl border-2 border-theme-dark transform transition-transform hover:-translate-y-1 cursor-default">
                             <div
                                 class="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-8 border border-red-100 transform -rotate-2">
                                 <i class="fas fa-ban text-2xl text-theme-red"></i>
@@ -91,7 +90,7 @@
                                 not just consume content. Action over theory.</p>
                         </div>
                         <div
-                            class="bg-white p-10 rounded-3xl border border-slate-200/60 shadow-lg shadow-slate-200/30 transform transition-transform hover:-translate-y-1 cursor-default mt-6 md:mt-0">
+                            class="bg-theme-card p-10 rounded-3xl border-2 border-theme-dark transform transition-transform hover:-translate-y-1 cursor-default mt-6 md:mt-0">
                             <div
                                 class="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 border border-blue-100 transform rotate-2">
                                 <i class="fas fa-handshake text-2xl text-theme-blue"></i>
@@ -110,7 +109,7 @@
     </section>
 
     <!-- HOW IT WORKS (PROCESS) -->
-    <section class="py-20 border-t border-slate-200">
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
@@ -128,7 +127,7 @@
                 <div class="relative z-10 group">
                     <div class="text-center">
                         <div
-                            class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-8 border-4 border-slate-200 group-hover:border-theme-blue transition-colors duration-300 shadow-sm relative">
+                            class="w-20 h-20 mx-auto bg-theme-card rounded-full flex items-center justify-center mb-8 border-4 border-slate-200 group-hover:border-theme-blue transition-colors duration-300 relative">
                             <span
                                 class="text-2xl font-extrabold text-slate-400 group-hover:text-theme-blue transition-colors duration-300">1</span>
                         </div>
@@ -145,7 +144,7 @@
                 <div class="relative z-10 group mt-8 lg:mt-0">
                     <div class="text-center">
                         <div
-                            class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-8 border-4 border-slate-200 group-hover:border-theme-blue transition-colors duration-300 shadow-sm relative">
+                            class="w-20 h-20 mx-auto bg-theme-card rounded-full flex items-center justify-center mb-8 border-4 border-slate-200 group-hover:border-theme-blue transition-colors duration-300 relative">
                             <span
                                 class="text-2xl font-extrabold text-slate-400 group-hover:text-theme-blue transition-colors duration-300">2</span>
                         </div>
@@ -162,7 +161,7 @@
                 <div class="relative z-10 group mt-8 lg:mt-0">
                     <div class="text-center">
                         <div
-                            class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-8 border-4 border-slate-200 group-hover:border-theme-blue transition-colors duration-300 shadow-sm relative">
+                            class="w-20 h-20 mx-auto bg-theme-card rounded-full flex items-center justify-center mb-8 border-4 border-slate-200 group-hover:border-theme-blue transition-colors duration-300 relative">
                             <span
                                 class="text-2xl font-extrabold text-slate-400 group-hover:text-theme-blue transition-colors duration-300">3</span>
                         </div>
@@ -179,7 +178,7 @@
                 <div class="relative z-10 group mt-8 lg:mt-0">
                     <div class="text-center">
                         <div
-                            class="w-20 h-20 mx-auto bg-theme-dark rounded-full flex items-center justify-center mb-8 border-4 border-theme-dark transform group-hover:scale-110 transition-transform duration-300 shadow-lg relative">
+                            class="w-20 h-20 mx-auto bg-theme-dark rounded-full flex items-center justify-center mb-8 border-4 border-theme-dark transform group-hover:scale-110 transition-transform duration-300 relative">
                             <span class="text-2xl font-extrabold text-white">4</span>
                         </div>
                         <h3
@@ -207,7 +206,7 @@
 
             <div class="grid md:grid-cols-3 gap-12 mt-12">
                 <div
-                    class="bg-white p-10 rounded-3xl border border-slate-200/60 shadow-lg shadow-slate-200/30 transform transition-all hover:-translate-y-2 cursor-default group">
+                    class="bg-theme-card p-10 rounded-3xl border-2 border-theme-dark transform transition-all hover:-translate-y-2 cursor-default group">
                     <div
                         class="w-16 h-16 bg-blue-50 text-theme-blue rounded-2xl flex items-center justify-center mb-8 border border-blue-100 group-hover:scale-110 transition-transform">
                         <i class="fas fa-rocket text-2xl"></i>
@@ -231,7 +230,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-10 rounded-3xl border border-slate-200/60 shadow-lg shadow-slate-200/30 transform transition-all hover:-translate-y-2 cursor-default group mt-8 md:mt-0">
+                    class="bg-theme-card p-10 rounded-3xl border-2 border-theme-dark transform transition-all hover:-translate-y-2 cursor-default group mt-8 md:mt-0">
                     <div
                         class="w-16 h-16 bg-blue-50 text-theme-blue rounded-2xl flex items-center justify-center mb-8 border border-blue-100 group-hover:scale-110 transition-transform">
                         <i class="fas fa-sync-alt text-2xl"></i>
@@ -255,7 +254,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-10 rounded-3xl border border-slate-200/60 shadow-lg shadow-slate-200/30 transform transition-all hover:-translate-y-2 cursor-default group mt-8 md:mt-0">
+                    class="bg-theme-card p-10 rounded-3xl border-2 border-theme-dark transform transition-all hover:-translate-y-2 cursor-default group mt-8 md:mt-0">
                     <div
                         class="w-16 h-16 bg-blue-50 text-theme-blue rounded-2xl flex items-center justify-center mb-8 border border-blue-100 group-hover:scale-110 transition-transform">
                         <i class="fas fa-brain text-2xl"></i>
@@ -282,7 +281,7 @@
     </section>
 
     <!-- WHO THRIVES -->
-    <section class="py-20 border-t border-slate-200">
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
@@ -294,7 +293,7 @@
             <div class="grid md:grid-cols-3 gap-12 mt-12 max-w-6xl mx-auto">
                 <div class="group">
                     <div class="mb-6 inline-block transform group-hover:-rotate-6 transition-transform">
-                        <i class="fas fa-exclamation-circle text-5xl text-theme-red filter drop-shadow-sm"></i>
+                        <i class="fas fa-exclamation-circle text-5xl text-theme-red"></i>
                     </div>
                     <h3
                         class="text-xl lg:text-2xl font-bold text-theme-dark mb-4 group-hover:text-theme-red transition-colors">
@@ -311,7 +310,7 @@
 
                 <div class="group mt-8 md:mt-0">
                     <div class="mb-6 inline-block transform group-hover:translate-y-[-8px] transition-transform">
-                        <i class="fas fa-arrow-up text-5xl text-theme-blue filter drop-shadow-sm"></i>
+                        <i class="fas fa-arrow-up text-5xl text-theme-blue"></i>
                     </div>
                     <h3
                         class="text-xl lg:text-2xl font-bold text-theme-dark mb-4 group-hover:text-theme-blue transition-colors">
@@ -328,7 +327,7 @@
 
                 <div class="group mt-8 md:mt-0">
                     <div class="mb-6 inline-block transform group-hover:rotate-6 transition-transform">
-                        <i class="fas fa-graduation-cap text-5xl text-theme-blue filter drop-shadow-sm"></i>
+                        <i class="fas fa-graduation-cap text-5xl text-theme-blue"></i>
                     </div>
                     <h3
                         class="text-xl lg:text-2xl font-bold text-theme-dark mb-4 group-hover:text-theme-blue transition-colors">
@@ -363,8 +362,9 @@
                         start your transformation.
                     </p>
                     <a href="/miply-website/join.html"
-                        class="inline-block border-2 border-theme-dark bg-white px-10 py-5 text-2xl font-black text-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] font-hand hover:bg-theme-blue-light transition-all transform hover:rotate-1 hover:scale-105">
-                        Join the Guild <i class="fas fa-arrow-right ml-2"></i>
+                        class="sketch-button inline-block px-10 py-5 text-2xl font-black flex items-center justify-center gap-2 max-w-max mx-auto mt-4">
+                        Join the Guild <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
@@ -372,7 +372,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-theme-card border-t border-slate-200 pt-16 pb-8 relative">
+    <footer class="bg-dot-grid border-t border-slate-200 pt-16 pb-8 relative">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 mb-16">
                 <div>
@@ -384,9 +384,7 @@
                     <div id="contact-form" class="flex gap-2 max-w-md">
                         <input type="email" placeholder="enter_email..."
                             class="flex-grow bg-slate-50 border-2 border-slate-200 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] px-4 py-3 font-hand text-sm focus:border-theme-blue focus:outline-none">
-                        <button
-                            class="font-hand font-bold text-lg text-theme-dark px-6 py-3 border-2 border-theme-dark bg-white rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-theme-blue-light hover:border-theme-dark transition-all transform hover:scale-105"
-                            onclick="handleFormSubmit(this)">
+                        <button class="sketch-button font-bold text-lg px-6 py-3" onclick="handleFormSubmit(this)">
                             Apply
                         </button>
                     </div>

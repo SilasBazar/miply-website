@@ -13,154 +13,172 @@
     <script type="module" src="/src/main.js"></script>
 </head>
 
-<body class="bg-dot-grid min-h-screen flex flex-col selection:bg-amber-200 selection:text-slate-900">
+<body class="bg-theme-page min-h-screen flex flex-col selection:bg-theme-yellow-highlight selection:text-theme-dark">
 
     <!-- NAV BAR -->
-    <nav class="fixed top-0 w-full z-50 bg-[#f8fafc]/90 backdrop-blur-sm border-b border-slate-200/50">
+    <nav class="fixed top-0 w-full z-50 bg-theme-page/90 backdrop-blur-sm border-b border-slate-200/50">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center">
-                <img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-40 w-auto">
+                <a href="/"><img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-40 w-auto"></a>
             </div>
 
-            <div class="hidden md:flex gap-8 font-medium text-slate-600 text-sm">
+            <div class="hidden lg:flex gap-8 font-medium text-slate-600 text-sm">
                 <a href="/" class="hover:text-theme-blue transition-colors">Home</a>
-                <a href="/miply-website/what-is-mip.html" class="hover:text-theme-blue transition-colors">What Is a
-                    MIP</a>
-                <a href="/miply-website/guild.html" class="hover:text-theme-blue transition-colors">The Guild</a>
-                <a href="/miply-website/build-log.html" class="hover:text-theme-blue transition-colors">Build Log</a>
-                <a href="/miply-website/join.html" class="hover:text-theme-blue transition-colors">Join</a>
+                <a href="/what-is-mip.html" class="hover:text-theme-blue transition-colors">What Is a MIP</a>
+                <a href="/guild.html" class="hover:text-theme-blue transition-colors">The Guild</a>
+                <a href="/build-log.html" class="hover:text-theme-blue transition-colors">Build Log</a>
+                <a href="#" class="hover:text-theme-blue transition-colors">Case Studies</a>
+                <a href="#" class="hover:text-theme-blue transition-colors">Articles</a>
             </div>
 
-            <a href="/miply-website/join.html"
-                class="font-hand font-bold text-lg text-theme-dark px-6 py-2 border-2 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-theme-blue-light transition-all transform hover:-rotate-1 hover:scale-105 inline-block">
-                Apply <i class="fas fa-arrow-right ml-1 text-sm"></i>
-            </a>
+            <div class="hidden lg:block">
+                <a href="/join.html" class="sketch-button font-bold text-sm px-6 py-2.5 inline-flex items-center gap-2">
+                    Join <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-theme-dark text-2xl" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden bg-theme-card border-b border-slate-200/50 px-4 py-4 lg:hidden">
+            <div class="flex flex-col space-y-4 text-center font-medium text-slate-600">
+                <a href="/" class="hover:text-theme-blue">Home</a>
+                <a href="/what-is-mip.html" class="hover:text-theme-blue">What Is a MIP</a>
+                <a href="/guild.html" class="hover:text-theme-blue">The Guild</a>
+                <a href="/build-log.html" class="hover:text-theme-blue">Build Log</a>
+                <a href="#" class="hover:text-theme-blue">Case Studies</a>
+                <a href="#" class="hover:text-theme-blue">Articles</a>
+                <a href="/join.html" class="font-hand font-bold text-lg text-theme-blue mt-4">Join <i
+                        class="fas fa-arrow-right text-sm"></i></a>
+            </div>
         </div>
     </nav>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
     <!-- HERO SECTION -->
-    <header class="pt-32 pb-20 px-4">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+    <header class="pt-36 pb-12 px-4 relative h-auto bg-dot-grid">
+        <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
 
-            <!-- Text Side -->
-            <div class="lg:col-span-7">
-                <div class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
-                    <i class="fas fa-lightbulb"></i> Intelligence. Useful.
-                </div>
-
-                <h1 class="text-4xl md:text-6xl font-black text-theme-dark leading-[1.1] mb-8">
-                    Make intelligence <br>
-                    <span class="marker-highlight inline-block transform -rotate-1 px-2">useful</span> not just <br>
-                    <span class="pen-strike">impressive.</span>
-                </h1>
-
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
-                    We help MSPs stop fixing broken tech and start architecting <span
-                        class="font-bold text-theme-dark">business outcomes</span>.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="/miply-website/what-is-mip.html"
-                        class="sketch-card border-sketch-4 px-8 py-4 text-lg font-bold bg-white text-theme-dark flex items-center justify-center gap-3 group hover:scale-105">
-                        Become a MIP
-                        <i class="fas fa-hammer text-theme-blue group-hover:rotate-12 transition-transform"></i>
-                    </a>
-                </div>
+            <!-- Title Highlight Label -->
+            <div class="inline-block font-hand text-theme-blue text-xl font-bold mb-6 transform -rotate-1">
+                <i class="fas fa-lightbulb mr-2"></i> From MSP to MIP.
             </div>
 
-            <!-- Diagram Side: The Transformation -->
-            <div class="relative hidden lg:block p-8 lg:col-span-5">
-                <div
-                    class="absolute inset-0 bg-theme-card border-2 border-slate-200 rounded-lg transform rotate-2 shadow-lg z-0">
-                </div>
-                <div class="relative z-10 w-full h-auto flex flex-col items-center justify-center py-12">
-                    <!-- Simple Sketch Visual -->
-                    <div class="flex items-center gap-6">
-                        <div class="flex flex-col items-center opacity-50">
-                            <div
-                                class="w-24 h-24 border-2 border-slate-400 border-dashed rounded flex items-center justify-center text-3xl text-slate-400">
-                                <i class="fas fa-laptop-medical"></i>
-                            </div>
-                            <span class="font-hand mt-2 text-slate-400">Fixing Outdated Tech</span>
-                        </div>
+            <!-- Big Heading -->
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-theme-dark leading-[1.1] mb-8 tracking-tight">
+                The next evolution of the <span class="pen-strike font-bold">MSP model</span>
+                centers on <br class="hidden lg:block" />
+                <span class="marker-highlight inline-block transform -rotate-1 px-4 mt-2">INTELLIGENCE.</span>
+            </h1>
 
-                        <div class="text-4xl text-theme-blue">
-                            <i class="fas fa-arrow-right transform rotate-12"></i>
-                        </div>
+            <!-- Subhead -->
+            <p class="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed max-w-3xl font-hand">
+                Turning AI, automation, and data into real outcomes clients are willing to pay for.
+            </p>
 
-                        <div class="flex flex-col items-center relative">
-                            <div class="relative">
-                                <div class="absolute -top-2 -right-3 text-theme-blue text-2xl animate-bounce">
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div
-                                    class="w-24 h-24 border-2 border-theme-dark bg-theme-blue-light rounded flex items-center justify-center text-3xl text-theme-dark shadow-[4px_4px_0px_var(--color-dark)]">
-                                    <i class="fas fa-brain"></i>
-                                </div>
-                            </div>
-                            <span
-                                class="font-hand font-bold mt-2 text-theme-dark text-center max-w-[150px] leading-tight">Intelligence
-                                Driven Outcomes</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/guild.html"
+                    class="sketch-button px-8 py-4 text-lg font-bold flex items-center justify-center gap-3 group">
+                    Enter the Guild
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <a href="/miply-website/what-is-mip.html"
+                    class="sketch-button-alt font-bold text-lg px-8 py-4 flex items-center justify-center gap-2 group">
+                    See the MIP Roadmap
+                    <i class="fas fa-map text-theme-blue group-hover:text-white transition-colors border-slate-200"></i>
+                </a>
             </div>
-
         </div>
     </header>
 
-    <!-- SECTION 1: THE REALITY CHECK (Split Layout) -->
-    <section id="reality" class="py-20 border-t border-slate-200 bg-theme-card">
-        <div class="max-w-7xl mx-auto px-4">
+    <!-- VIDEO / MEDIA SECTION -->
+    <section class="py-24 px-4 relative bg-theme-card">
+        <div class="max-w-5xl mx-auto relative z-10 group">
+            <div
+                class="relative z-10 w-full aspect-video bg-slate-900 rounded-2xl overflow-hidden ring-1 ring-slate-200 flex items-center justify-center transition-transform hover:scale-[1.02] duration-500">
+                <!-- Play Button -->
+                <div
+                    class="w-20 h-20 bg-white/10 backdrop-blur border border-white/20 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform cursor-pointer relative group/btn">
+                    <i class="fas fa-play text-white text-3xl ml-2 drop-shadow-md"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="grid lg:grid-cols-12 gap-12 items-start">
+    <!-- SECTION 1: THE PROBLEM / DEFINITION -->
+    <section id="problem" class="py-20 border-t border-slate-200 bg-dot-grid">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
 
                 <!-- Left: The Narrative -->
-                <div class="lg:col-span-5 pt-8">
-                    <span
-                        class="font-hand text-theme-blue text-xl font-bold bg-theme-blue-light px-4 py-1 rounded-full border border-theme-blue-light">
-                        Why We Are Here
+                <div class="lg:col-span-6 pt-4 pr-0 lg:pr-4">
+                    <span class="font-hand text-theme-blue text-xl font-bold mb-4 inline-block transform -rotate-1">
+                        <span class="hand-underline">The New Definition</span>
                     </span>
-                    <h2 class="text-4xl font-black mt-6 mb-6">The MSP industry is changing.</h2>
+                    <h2 class="text-4xl lg:text-5xl font-black mb-6 text-theme-dark mt-2">MIP: Managed Intelligence
+                        Provider</h2>
+                    <h3 class="text-2xl font-bold mb-8 text-slate-700">The <span class="pen-strike">MSP Model</span> is
+                        Being Rewritten.
+                    </h3>
+
                     <p class="text-slate-600 text-lg mb-6 leading-relaxed">
-                        We were built for MSPs who don't want to go extinct.
+                        Infrastructure has become standardized. Tool stacks are expanding. Automation is accelerating.
                     </p>
-                    <div class="p-6 bg-slate-50 border-l-4 border-theme-dark italic text-slate-700 font-medium">
-                        "AI is not the problem. The lack of a safe and repeatable way to implement it is."
-                    </div>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                        As technology becomes more accessible, differentiation no longer comes from managing systems. It
+                        comes from improving <span
+                            class="marker-highlight px-1 transform -rotate-1 inline-block">outcomes</span>.
+                    </p>
+                    <p class="text-slate-600 text-lg mb-10 leading-relaxed font-bold text-theme-dark font-hand">
+                        The next evolution of the industry belongs to providers who design systems that think, adapt,
+                        and improve over time.
+                    </p>
+
+                    <a href="/what-is-mip.html"
+                        class="sketch-button px-8 py-4 text-lg font-bold inline-flex items-center justify-center gap-3 group">
+                        Learn More
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
 
                 <!-- Right: The Definition Sketch -->
-                <div class="lg:col-span-7">
-                    <div class="sticky-note p-8 md:p-12 relative">
-                        <!-- Tape visual -->
-                        <div
-                            class="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-slate-200/50 backdrop-blur transform rotate-1">
-                        </div>
+                <div class="lg:col-span-6 relative mt-16 lg:mt-0 pl-0 lg:pl-12">
+                    <div class="relative bg-theme-card p-12 lg:p-16 rounded-3xl ring-1 ring-theme-border-light">
 
-                        <h3 class="font-hand text-xl lg:text-2xl font-bold text-center mb-8 text-theme-blue">
-                            <span class="hand-underline">The New Definition</span>
-                        </h3>
+                        <div class="flex flex-col items-center justify-center h-full min-h-[350px] gap-12">
+                            <div class="flex items-center gap-8">
+                                <div
+                                    class="w-24 h-24 rounded-2xl bg-theme-page flex items-center justify-center text-4xl text-theme-dark ring-1 ring-theme-border-light">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="text-3xl text-theme-muted">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div
+                                    class="w-24 h-24 rounded-2xl bg-theme-blue-light flex items-center justify-center text-4xl text-theme-blue ring-1 ring-theme-border-light">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                            </div>
 
-                        <div class="flex flex-col md:flex-row items-center gap-6 justify-center">
-                            <div class="text-center">
-                                <span class="font-extrabold text-5xl md:text-6xl text-theme-dark">M</span>
-                                <div class="font-bold text-theme-dark">Managed</div>
+                            <div class="text-3xl text-theme-muted">
+                                <i class="fas fa-arrow-down"></i>
                             </div>
-                            <div class="text-center">
-                                <span class="font-extrabold text-5xl md:text-6xl text-theme-dark">I</span>
-                                <div class="font-bold text-theme-dark">Intelligence</div>
-                            </div>
-                            <div class="text-center">
-                                <span class="font-extrabold text-5xl md:text-6xl text-theme-dark">P</span>
-                                <div class="font-bold text-theme-dark">Provider</div>
-                            </div>
-                        </div>
 
-                        <div class="mt-8 text-center max-w-lg mx-auto font-hand text-lg text-slate-600">
-                            <i class="fas fa-quote-left text-slate-300 mr-2"></i>
-                            Turning AI, automation, and data into real outcomes clients are willing to pay for.
-                            <i class="fas fa-quote-right text-slate-300 ml-2"></i>
+                            <div
+                                class="w-full max-w-xs bg-theme-dark rounded-2xl p-8 flex flex-col items-center justify-center text-white">
+                                <i class="fas fa-chart-line text-5xl text-theme-blue mb-4"></i>
+                                <span class="font-bold text-2xl tracking-wide uppercase text-blue-50">Outcomes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,171 +187,299 @@
         </div>
     </section>
 
-    <!-- SECTION 2: HOW WE DO IT (The Blueprint Journey) -->
-    <section id="blueprint" class="py-24 relative">
-
-
+    <!-- OUTCOMES SECTION -->
+    <section id="outcomes" class="py-32 relative bg-theme-card border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">What MIPLY Actually Is</h2>
-                <p class="font-hand text-lg md:text-xl text-slate-500">Your sidekick in becoming a competitive solution
-                    provider.
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-theme-dark tracking-tight">
+                    Managed Intelligence Providers Deliver Outcomes.
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    A Managed Intelligence Provider integrates data architecture, workflow design, automation, and AI
+                    into cohesive systems that improve business performance. <span
+                        class="font-bold text-theme-blue block mt-2 font-hand">The focus shifts from tools to
+                        results.</span>
                 </p>
             </div>
 
-            <!-- Connected Nodes Layout -->
-            <div class="grid md:grid-cols-3 gap-8 relative pb-4 pt-8">
-                <!-- Step 1 -->
-                <div class="relative z-10 group mt-8 md:mt-0">
-                    <div
-                        class="bg-theme-card border-2 border-theme-dark border-sketch-1 p-4 pt-16 md:pt-4 text-center h-full shadow-md">
-                        <div
-                            class="w-24 h-24 mx-auto bg-theme-card border-2 border-theme-dark rounded-full flex items-center justify-center text-3xl -mt-20 md:-mt-16 mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-theme-blue"><i class="fas fa-user-astronaut"></i></span>
-                        </div>
-                        <h3 class="font-bold text-xl lg:text-2xl mb-3">The Sidekick</h3>
-                        <p class="text-slate-600 text-sm md:text-base">
-                            MIPLY helps MSPs make the shift to an MIP <span
-                                class="marker-highlight px-1">deliberately</span>, responsibly, and profitably.
-                        </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 relative mt-12">
+                <!-- Item 1 -->
+                <div class="group p-8 sketch-card border-sketch-1">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-bolt"></i>
                     </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Faster Operations</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Reduce process timelines through orchestration,
+                        automation, and decision support systems that eliminate unnecessary steps.</p>
                 </div>
-
-                <!-- Step 2 -->
-                <div class="relative z-10 group mt-8 md:mt-0">
-                    <div
-                        class="bg-theme-card border-2 border-theme-dark border-sketch-2 p-4 pt-16 md:pt-4 text-center h-full relative shadow-md">
-                        <div
-                            class="w-24 h-24 mx-auto bg-theme-card border-2 border-theme-dark rounded-full flex items-center justify-center text-3xl -mt-20 md:-mt-16 mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-red-500"><i class="fas fa-ban"></i></span>
-                        </div>
-                        <!-- Badge -->
-                        <div
-                            class="absolute -top-3 right-4 bg-red-100 text-red-600 text-[10px] font-bold px-2 py-1 rounded border border-red-200 uppercase tracking-wide">
-                            Anti-Vendor</div>
-                        <h3 class="font-bold text-xl lg:text-2xl mb-3">Not A Vendor</h3>
-                        <p class="text-slate-600 text-sm md:text-base">
-                            This is neither a training library nor trend-chasing; it's about building trust and creating
-                            real margins.
-                        </p>
+                <!-- Item 2 -->
+                <div class="group p-8 sketch-card border-sketch-2">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-coins"></i>
                     </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Lower Operational Cost</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Identify repetitive tasks and redesign workflows
+                        to reduce labor dependency while increasing output consistency.</p>
                 </div>
-
-                <!-- Step 3 -->
-                <div class="relative z-10 group mt-8 md:mt-0">
-                    <div
-                        class="bg-theme-card border-2 border-theme-dark border-sketch-3 p-4 pt-16 md:pt-4 text-center h-full shadow-md">
-                        <div
-                            class="w-24 h-24 mx-auto bg-theme-card border-2 border-theme-dark rounded-full flex items-center justify-center text-3xl -mt-20 md:-mt-16 mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-theme-blue"><i class="fas fa-key"></i></span>
-                        </div>
-                        <h3 class="font-bold text-xl lg:text-2xl mb-3">Own The Capability</h3>
-                        <p class="text-slate-600 text-sm md:text-base">
-                            We build tools <strong>with</strong> you, transfer ownership, and boom, meet the new you.
-                            You design, operate, and monetize intelligence.
-                        </p>
+                <!-- Item 3 -->
+                <div class="group p-8 sketch-card border-sketch-3">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-users-cog"></i>
                     </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Improved Employee Experience</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Remove friction from daily work by creating
+                        smarter routing, clearer visibility, and fewer manual bottlenecks.</p>
                 </div>
-
+                <!-- Item 4 -->
+                <div class="group p-8 sketch-card border-sketch-4">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Improved Client Experience</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Accelerate onboarding, improve response times, and
+                        deliver strategic insight that strengthens long-term relationships.</p>
+                </div>
+                <!-- Item 5 -->
+                <div class="group lg:col-start-2 p-8 sketch-card border-sketch-5">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Greater Visibility</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Surface real-time operational and financial
+                        signals that allow leadership teams to make informed decisions with confidence.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 3: PLATFORM & CALL TO ACTION -->
-    <section id="platform" class="py-20 relative">
-        <div class="max-w-4xl mx-auto px-4 relative z-10">
-
-            <!-- Big Sticky Note Container -->
-            <div class="sticky-note p-12 relative overflow-hidden text-center">
-                <!-- Decorative corner doodle -->
-                <div class="absolute -top-6 -right-6 w-24 h-24 bg-yellow-100 rounded-full z-0 opacity-50"></div>
-                <div
-                    class="absolute bottom-4 left-4 text-yellow-500 text-9xl font-black opacity-10 pointer-events-none z-0 transform -rotate-12">
-                    MIP</div>
-
-                <div class="relative z-10">
-                    <!-- Restored System Access Title -->
-                    <h3 class="font-hand text-xl lg:text-2xl font-bold text-center mb-8 text-theme-blue">
-                        <span class="hand-underline">System Access</span>
-                    </h3>
-
-                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-theme-dark">The MIPLY Platform</h2>
-
-                    <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                        Build, operate, and sell intelligence <span
-                            class="marker-highlight px-1 transform -rotate-1 inline-block">without dependency</span> on
-                        vendors or consultants.
+    <!-- GUILD SECTION -->
+    <section id="guild" class="py-32 border-t border-slate-200 bg-dot-grid relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-20 items-center">
+                <!-- Text -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -top-10 -left-6 text-slate-100 text-8xl z-0">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <span
+                        class="text-theme-blue text-sm uppercase tracking-widest font-bold mb-6 inline-block relative z-10 font-hand">
+                        Community & Capability
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-black mt-2 mb-6 text-theme-dark relative z-10 tracking-tight">
+                        MIPLY is the Guild for Managed Intelligence Providers.</h2>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed relative z-10">
+                        Inside the Guild, you work through structured frameworks, real-world implementation patterns,
+                        and peer-led discussions focused on execution. The goal is capability. <span
+                            class="bg-theme-blue-light text-theme-blue font-bold px-2 py-0.5 rounded">Durable,
+                            internal capability</span> that compounds over time.
                     </p>
+                    <p class="text-slate-600 text-lg mb-10 leading-relaxed font-medium relative z-10">
+                        Members leave with repeatable service architectures, refined delivery models, and the confidence
+                        to lead intelligence initiatives within their client environments.
+                    </p>
+                    <a href="/guild.html"
+                        class="sketch-button px-8 py-4 text-lg font-bold inline-flex items-center justify-center gap-3 group relative z-10">
+                        Learn More
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
 
-                    <!-- Silly Drawing Button -->
-                    <a href="/miply-website/what-is-mip.html"
-                        class="group relative inline-block focus:outline-none transform rotate-1 hover:rotate-2 transition-all hover:scale-105">
-                        <!-- Main Button Blob -->
-                        <span
-                            class="relative inline-block border-2 border-theme-dark bg-white px-10 py-5 text-2xl font-black text-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] font-hand group-hover:bg-theme-blue-light transition-all">
-                            Get More Info <i
-                                class="fas fa-pencil-alt ml-2 group-hover:rotate-12 transition-transform"></i>
-                        </span>
+                <!-- Feature Grid -->
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-8 relative pl-0 lg:pl-8">
+
+
+                    <!-- Features -->
+                    <div class="group p-8 sketch-card border-sketch-6">
+                        <div class="text-4xl text-theme-blue mb-6">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-theme-dark">Peer Engineering Sessions</h4>
+                        <p class="text-slate-600 text-lg leading-relaxed">Structured discussions focused on live
+                            implementations,
+                            challenges, and refinements.</p>
+                    </div>
+
+                    <div class="group p-8 sticky-note rounded-xl relative">
+                        <div
+                            class="absolute -top-1 -right-1 text-theme-blue text-2xl font-bold font-hand transform rotate-12">
+                            Quick Win!
+                        </div>
+                        <div class="text-4xl text-theme-blue mb-6">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-theme-dark"><span class="hand-underline">Shared
+                                Frameworks</span></h4>
+                        <p class="text-slate-700 text-lg leading-relaxed mt-4">Playbooks and repeatable models that
+                            guide
+                            service
+                            development
+                            and delivery.</p>
+                    </div>
+
+                    <div class="group p-8 sketch-card border-sketch-7">
+                        <div class="text-4xl text-theme-blue mb-6">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-theme-dark">Applied Build Labs</h4>
+                        <p class="text-slate-600 text-lg leading-relaxed">Hands-on development of intelligence-driven
+                            services
+                            tied to
+                            client workflows.</p>
+                    </div>
+
+                    <div class="group p-8 sketch-card border-sketch-8">
+                        <div class="text-4xl text-theme-blue mb-6">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-theme-dark">Capability Transfer</h4>
+                        <p class="text-slate-600 text-lg leading-relaxed">Strengthening internal teams to own, expand,
+                            and
+                            sustain
+                            intelligent systems long term.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUILD LOG SECTION -->
+    <section id="build-log" class="py-20 bg-theme-card border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-16 lg:gap-24">
+                <!-- Built for Builders -->
+                <div class="group pr-0 md:pr-8">
+                    <div class="text-5xl text-theme-blue mb-8"><i class="fas fa-hammer"></i></div>
+                    <h2
+                        class="text-3xl md:text-4xl font-black text-theme-dark mb-6 group-hover:text-theme-blue transition-colors">
+                        Built for Builders.</h2>
+                    <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                        The Guild is designed for applied transformation. Conversations are grounded in real
+                        implementation, measurable results, and technical problem solving. Members collaborate across
+                        biweekly sales and operations cohorts to refine messaging, architecture decisions, and delivery
+                        strategies. Shared patterns accelerate progress and reduce experimentation risk.
+                    </p>
+                    <a href="/guild.html"
+                        class="font-bold text-xl text-theme-dark border-b-2 border-theme-dark pb-1 inline-flex items-center gap-2 hover:text-theme-blue hover:border-theme-blue transition-colors font-hand">
+                        Learn More <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Intelligence Changes Performance -->
+                <div class="group pl-0 md:pl-8 border-t border-slate-200 md:border-t-0 md:border-l pt-12 md:pt-0">
+                    <div class="text-5xl text-theme-blue mb-8"><i class="fas fa-tachometer-alt"></i></div>
+                    <h2
+                        class="text-3xl md:text-4xl font-black text-theme-dark mb-6 group-hover:text-theme-blue transition-colors">
+                        Intelligence Changes Performance.</h2>
+                    <p class="text-slate-600 text-lg mb-10 leading-relaxed">
+                        Guild members are already redesigning workflows, structuring data environments, and embedding
+                        automation to create measurable performance gains across industries.
+                    </p>
+                    <a href="/build-log.html"
+                        class="text-xl font-bold text-theme-blue border-b-2 border-theme-blue pb-1 inline-flex items-center gap-2 hover:text-theme-dark hover:border-theme-dark transition-colors font-hand">
+                        Explore the Build Log
+                        <i class="fas fa-arrow-right text-sm"></i>
                     </a>
                 </div>
             </div>
         </div>
-
-
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- BOTTOM CTA SECTION -->
+    <section id="cta" class="py-32 relative bg-dot-grid border-t border-slate-200 overflow-hidden">
+        <!-- Abstract Background element -->
+        <div
+            class="absolute top-0 right-0 w-1/2 h-full bg-theme-blue opacity-[0.03] transform skew-x-12 translate-x-32 pointer-events-none">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-tight text-theme-dark">
+                The Future Belongs to Providers Who <br />
+                <span class="marker-highlight inline-block px-2">Engineer Intelligence.</span>
+            </h2>
+            <p
+                class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-slate-600 font-medium whitespace-pre-line">
+                The industry is moving toward systems that learn, adapt, and improve continuously.
+                Providers who guide that transformation gain strategic relevance.
+
+                <span class="font-hand font-bold text-theme-dark">MIPLY exists to help you build the frameworks,
+                    services, and capability required to lead.</span>
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="/join.html"
+                    class="sketch-button bg-theme-blue text-white hover:text-white px-8 py-5 text-xl font-bold flex justify-center items-center gap-2 group">
+                    Apply to Join the Guild
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="/join.html"
+                    class="sketch-button-alt text-theme-dark font-bold text-lg px-8 py-5 flex items-center justify-center text-center">
+                    Book a Strategy Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer id="contact" class="bg-theme-card border-t border-slate-200 pt-16 pb-8 relative">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 mb-16">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Ready to grab the marker?</h2>
-                    <p class="text-slate-500 mb-8 max-w-sm">
-                        Let's sketch out where you are, what you're trying to solve, and see if the MIP blueprint fits
-                        your business.
+            <div class="grid md:grid-cols-12 gap-12 mb-16">
+                <!-- Brand Statement -->
+                <div class="md:col-span-4">
+                    <img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-16 w-auto mb-6">
+                    <p class="text-slate-500 mb-8 font-medium text-base leading-relaxed pr-8 font-hand">
+                        MIPLY exists to help you build the frameworks, services, and internal capability required to
+                        lead in this intelligence-driven landscape.
                     </p>
-                    <div id="contact-form" class="flex gap-2 max-w-md">
-                        <input type="email" placeholder="enter_email..."
-                            class="flex-grow bg-slate-50 border-2 border-slate-200 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] px-4 py-3 font-hand text-sm focus:border-theme-blue focus:outline-none">
-                        <button
-                            class="font-hand font-bold text-lg text-theme-dark px-6 py-3 border-2 border-theme-dark bg-white rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-theme-blue-light hover:border-theme-dark transition-all transform hover:scale-105"
-                            onclick="handleFormSubmit(this)">
-                            Apply
-                        </button>
-                    </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-8 text-sm">
-                    <div>
-                        <h4 class="font-bold mb-4 uppercase text-xs tracking-wider text-slate-400">Explore</h4>
-                        <ul class="space-y-3 font-medium text-slate-600">
-                            <li><a href="/miply-website/what-is-mip.html" class="hover:text-theme-blue">What Is a
-                                    MIP</a></li>
-                            <li><a href="/miply-website/guild.html" class="hover:text-theme-blue">The Guild
-                                    Experience</a></li>
-                            <li><a href="/miply-website/build-log.html" class="hover:text-theme-blue">Case Studies</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold mb-4 uppercase text-xs tracking-wider text-slate-400">Legal</h4>
-                        <ul class="space-y-3 font-medium text-slate-600">
-                            <li><a href="#" class="hover:text-theme-blue">Privacy Policy</a></li>
-                            <li><a href="#" class="hover:text-theme-blue">Terms of Service</a></li>
-                        </ul>
-                    </div>
+                <!-- Column 1 -->
+                <div class="md:col-span-2">
+                    <h4 class="font-bold mb-4 uppercase text-xs tracking-wider text-slate-400">Explore</h4>
+                    <ul class="space-y-3 font-medium text-slate-600">
+                        <li><a href="/" class="hover:text-theme-blue transition-colors">Home</a></li>
+                        <li><a href="/what-is-mip.html" class="hover:text-theme-blue transition-colors">What Is a
+                                MIP</a></li>
+                        <li><a href="/guild.html" class="hover:text-theme-blue transition-colors">The Guild</a></li>
+                        <li><a href="/build-log.html" class="hover:text-theme-blue transition-colors">Build Log</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="md:col-span-2">
+                    <h4 class="font-bold mb-4 uppercase text-xs tracking-wider text-slate-400">Content</h4>
+                    <ul class="space-y-3 font-medium text-slate-600">
+                        <li><a href="#" class="hover:text-theme-blue transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-theme-blue transition-colors">Articles</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 Actions -->
+                <div class="md:col-span-4">
+                    <h4 class="font-bold mb-4 uppercase text-xs tracking-wider text-slate-400">Actions</h4>
+                    <ul class="space-y-3 font-medium text-slate-600">
+                        <li><a href="#" class="hover:text-theme-blue transition-colors"><i
+                                    class="fas fa-envelope mr-2"></i>Sign Up for Our Build Updates</a></li>
+                        <li><a href="/join.html" class="hover:text-theme-blue transition-colors"><i
+                                    class="fas fa-arrow-right mr-2"></i>Apply / Join</a></li>
+                        <li><a href="/join.html" class="hover:text-theme-blue transition-colors"><i
+                                    class="fas fa-calendar-alt mr-2"></i>Book a Strategy Call</a></li>
+                        <li><a href="#" class="hover:text-theme-blue transition-colors"><i
+                                    class="fas fa-play-circle mr-2"></i>Watch the Overview</a></li>
+                    </ul>
                 </div>
             </div>
 
             <div
-                class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
-                <div class="font-mono">
-                    &copy; 2026 MIPLY SYSTEMS.
+                class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400 font-medium">
+                <div>
+                    &copy; 2024 MIPLY SYSTEMS | <a href="#" class="hover:text-theme-blue">Privacy</a> | <a href="#"
+                        class="hover:text-theme-blue">Terms of Use</a>
                 </div>
                 <div class="flex gap-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-slate-600"><i class="fab fa-twitter text-lg"></i></a>
-                    <a href="#" class="hover:text-slate-600"><i class="fab fa-linkedin text-lg"></i></a>
-                    <a href="#" class="hover:text-slate-600"><i class="fab fa-github text-lg"></i></a>
+                    <a href="#" class="hover:text-slate-600 transition-colors"><i
+                            class="fab fa-twitter text-lg"></i></a>
+                    <a href="#" class="hover:text-slate-600 transition-colors"><i
+                            class="fab fa-linkedin text-lg"></i></a>
+                    <a href="#" class="hover:text-slate-600 transition-colors"><i class="fab fa-github text-lg"></i></a>
                 </div>
             </div>
         </div>
