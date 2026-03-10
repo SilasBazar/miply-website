@@ -177,6 +177,21 @@
         color: #ffffff;
     }
 
+    .sketch-button-blue {
+        background-color: var(--color-blue);
+        color: #ffffff;
+        border: none;
+        border-radius: 80px 10px 75px 12px / 10px 75px 12px 80px;
+        transition: all 0.2s ease;
+    }
+
+    .sketch-button-blue:hover {
+        background-color: var(--color-dark);
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+
     /* Existing sketch card shape (The Sidekick card) */
     .border-sketch-1 {
         border-radius: 70px 12px 65px 14px / 12px 65px 14px 70px;
