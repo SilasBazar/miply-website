@@ -19,114 +19,293 @@
     <nav class="fixed top-0 w-full z-50 bg-theme-page/90 backdrop-blur-sm border-b border-slate-200/50">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center">
-                <img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-40 w-auto">
+                <a href="/"><img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-40 w-auto"></a>
             </div>
 
-            <div class="hidden md:flex gap-8 font-medium text-slate-600 text-sm">
+            <div class="hidden lg:flex gap-8 font-medium text-slate-600 text-sm">
                 <a href="/" class="hover:text-theme-blue transition-colors">Home</a>
-                <a href="/miply-website/what-is-mip.html" class="hover:text-theme-blue transition-colors">What Is a
-                    MIP</a>
-                <a href="/miply-website/guild.html" class="hover:text-theme-blue transition-colors">The Guild</a>
-                <a href="/miply-website/build-log.html" class="hover:text-theme-blue transition-colors">Build Log</a>
-                <a href="/miply-website/join.html" class="hover:text-theme-blue transition-colors">Join</a>
+                <a href="/what-is-mip.html" class="hover:text-theme-blue transition-colors">What Is a MIP</a>
+                <a href="/guild.html" class="hover:text-theme-blue transition-colors">The Guild</a>
+                <a href="/build-log.html" class="hover:text-theme-blue transition-colors">Build Log</a>
+                <a href="/join.html" class="hover:text-theme-blue transition-colors">Join</a>
             </div>
 
-            <a href="/miply-website/join.html"
-                class="font-hand font-bold text-lg text-theme-dark px-6 py-2 border-2 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:bg-theme-blue-light transition-all transform hover:-rotate-1 hover:scale-105 inline-block">
-                Apply <i class="fas fa-arrow-right ml-1 text-sm"></i>
-            </a>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header class="pt-32 pb-20 px-4 bg-dot-grid">
-        <div class="max-w-7xl mx-auto">
-            <div class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
-                <i class="fas fa-question-circle"></i> The Future of MSP
-            </div>
-            <h1 class="text-4xl md:text-6xl font-black text-theme-dark leading-[1.1] mb-8">
-                What Is A <span class="marker-highlight inline-block transform -rotate-1 px-4 mt-2">MIP?</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-3xl">
-                The traditional MSP model is breaking. Managed Intelligence Providers are the
-                <span class="font-bold text-theme-dark">category-leading solution</span> for modern businesses.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 max-w-xl">
-                <a href="/miply-website/guild.html"
-                    class="sketch-button px-8 py-4 text-lg font-bold flex items-center justify-center gap-3 group">
-                    Join the Guild <i class="fas fa-graduation-cap group-hover:rotate-12 transition-transform"></i>
+            <div class="hidden lg:block">
+                <a href="/join.html"
+                    class="sketch-button-blue font-bold text-sm px-6 py-2.5 inline-flex items-center gap-2">
+                    Join <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-theme-dark text-2xl" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </header>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden bg-theme-card border-b border-slate-200/50 px-4 py-4 lg:hidden">
+            <div class="flex flex-col space-y-4 text-center font-medium text-slate-600">
+                <a href="/" class="hover:text-theme-blue">Home</a>
+                <a href="/what-is-mip.html" class="hover:text-theme-blue">What Is a MIP</a>
+                <a href="/guild.html" class="hover:text-theme-blue">The Guild</a>
+                <a href="/build-log.html" class="hover:text-theme-blue">Build Log</a>
+                <a href="/join.html" class="hover:text-theme-blue">Join</a>
+                <a href="/join.html"
+                    class="sketch-button-blue font-bold text-sm inline-flex items-center justify-center px-6 py-2.5 mt-4 mx-auto w-max">Join
+                    <i class="fas fa-arrow-right text-sm ml-2"></i></a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
-    <!-- THE PROBLEM -->
-    <section class="py-20 border-t border-slate-200 bg-theme-card">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid lg:grid-cols-5 gap-16 items-start">
-                <div class="lg:col-span-3">
-                    <span class="inline-block font-hand text-theme-red text-xl font-bold mb-4 transform -rotate-1">
-                        <i class="fas fa-exclamation-triangle"></i> The Problem
-                    </span>
-                    <h2 class="text-3xl lg:text-4xl font-extrabold text-theme-dark mb-12">Traditional MSP Services
-                        Aren't
-                        Enough</h2>
-
-                    <div
-                        class="border-l-4 border-theme-red pl-8 py-2 mb-12 transform transition-transform hover:translate-x-2">
-                        <h3 class="text-2xl font-bold text-theme-dark mb-4">Commoditized Services</h3>
-                        <p class="text-slate-600 mb-4 text-lg">
-                            MSPs are stuck providing the same basic IT services everyone else offers. Response times are
-                            slow, costs are flat, and clients have no choice but to pay more for incremental
-                            improvements.
-                        </p>
-                        <p class="text-slate-600 text-lg font-medium">
-                            Everyone's offering the same tickets, the same hours, the same outcome.
-                        </p>
+    <!-- HERO SECTION -->
+    <header class="pt-36 pb-24 px-4 bg-dot-grid relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 items-end">
+                <!-- Left: Text -->
+                <div class="lg:col-span-9">
+                    <div class="font-hand text-theme-blue text-xl font-bold mb-6 inline-block transform -rotate-1">
+                        <span class="hand-underline">The Next Evolution</span>
                     </div>
 
-                    <div
-                        class="border-l-4 border-theme-red pl-8 py-2 transform transition-transform hover:translate-x-2">
-                        <h3 class="text-2xl font-bold text-theme-dark mb-4">AI Without a Plan</h3>
-                        <p class="text-slate-600 mb-4 text-lg">
-                            Many MSPs are scared of AI, but don't know how to implement it safely.
-                        </p>
-                        <p class="text-slate-600 text-lg font-medium">
-                            Without a repeatable framework, AI becomes an expensive experiment instead of a business
-                            advantage.
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-theme-dark leading-[1.05] mb-6 tracking-tight">
+                        Managed <br />
+                        Intelligence Provider
+                    </h1>
+
+                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-slate-700 leading-snug">
+                        Designs, structures, and operates intelligence-driven <br />
+                        systems that measurably improve business performance.
+                    </h3>
+
+                    <div class="text-lg md:text-xl text-slate-600 mb-6 leading-relaxed max-w-2xl space-y-6">
+                        <p>
+                            The MSP model was built around infrastructure stability and system reliability. That foundation remains essential. The next phase of the industry requires more than uptime. It requires structured data environments, workflow orchestration, and applied intelligence that improves how businesses operate.
                         </p>
                     </div>
                 </div>
 
-                <div class="lg:col-span-2 lg:pl-8 pt-8 lg:pt-0">
-                    <div class="sticky-note p-10 rounded-lg">
-                        <h3 class="text-2xl font-hand font-bold text-theme-dark mb-8 pb-3">
-                            <span class="hand-underline-red">The Reality Check</span>
-                        </h3>
-                        <ul class="space-y-8 text-slate-600">
-                            <li class="flex items-start gap-5">
-                                <i class="fas fa-times text-theme-red text-2xl mt-1 flex-shrink-0"></i>
-                                <div>
-                                    <strong class="block text-theme-dark text-xl mb-2">No Real Differentiation</strong>
-                                    <span class="leading-relaxed text-slate-500">Clients can't tell you apart. The
-                                        services feel interchangeable.</span>
-                                </div>
+                <!-- Right: Sticky Note -->
+                <div class="lg:col-span-3 relative mt-8 lg:mt-0 flex justify-center lg:justify-end z-20">
+                    <div class="sticky-note p-6 md:p-8 text-center relative max-w-[280px] transform rotate-2 translate-y-[80px] group hover:-rotate-1 transition-transform">
+                        <p class="text-theme-dark text-lg leading-relaxed font-bold font-hand mb-4">
+                            A Managed Intelligence Provider engineers that next layer.
+                        </p>
+                        <a href="/join.html"
+                            class="sketch-button-blue inline-flex px-4 py-2.5 text-sm font-bold items-center justify-center gap-2 w-full transition-colors shadow-inner">
+                            Apply Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: ARCHITECTURE MODEL -->
+    <section class="py-24 border-t border-slate-200 bg-theme-card relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-20 relative z-10 grid lg:grid-cols-2 gap-16 items-end">
+                <div>
+                    <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
+                        <i class="fas fa-layer-group mt-1 mr-2"></i> The Foundation
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-black text-theme-dark mb-6 leading-[1.1]">
+                        The Four-Layer<br />Architecture Model
+                    </h2>
+                    <p class="text-xl text-slate-600 max-w-xl leading-relaxed">
+                        A Managed Intelligence Provider operates across four integrated layers. Intelligence becomes durable only when architecture is disciplined.
+                    </p>
+                </div>
+                <!-- Architecture Quote Callout -->
+                <div class="relative flex lg:justify-end">
+                    <div class="sticky-note p-8 md:p-10 text-center relative max-w-md transform rotate-2 hover:-rotate-1 transition-transform">
+                        <h3 class="text-2xl font-black text-theme-dark mb-4 drop-shadow-sm leading-tight">Infrastructure supports data.<br/>Data supports workflow.<br/>Workflow enables intelligence.</h3>
+                        <div class="border-t border-yellow-200/50 pt-4 mt-6">
+                            <p class="text-xl font-hand font-bold text-theme-blue transform -rotate-2">
+                                <i class="fas fa-arrow-right mr-2 text-sm"></i> Intelligence improves performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Progression Diagram -->
+            <div class="max-w-5xl mx-auto flex flex-col gap-6 relative mb-16 px-4 md:px-0 z-10">
+                <!-- Data flow line behind: yellow at top, blue at bottom -->
+                <div class="absolute left-[calc(2.5rem+1rem)] md:left-[calc(4rem+1rem)] lg:left-[calc(5rem+1.5rem)] top-10 bottom-10 w-2 bg-gradient-to-b from-yellow-400 via-blue-300 to-theme-blue z-0 rounded-full"></div>
+                
+                <!-- Layer 1: Infrastructure -->
+                <div class="sketch-card border-sketch-2 p-8 lg:p-10 relative z-10 bg-theme-card ml-10 md:ml-24 lg:ml-32 transform transition-all hover:-translate-y-2 hover:shadow-xl group">
+                    <div class="absolute -left-16 md:-left-20 lg:-left-24 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#fcd34d] flex items-center justify-center text-theme-dark font-black text-xl md:text-2xl shadow-md group-hover:scale-110 transition-transform">1</div>
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                        <div class="text-5xl text-[#fcd34d] opacity-80 mt-1 hidden md:block"><i class="fas fa-server"></i></div>
+                        <div>
+                            <h3 class="text-3xl font-black text-theme-dark mb-3 tracking-tight">Infrastructure Layer</h3>
+                            <p class="text-theme-dark font-bold text-lg mb-3 tracking-wide">Endpoints, cloud environments, identity management, cybersecurity, system stability.</p>
+                            <p class="text-slate-600 text-lg leading-relaxed">This layer ensures reliability and secure access.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2: Data Architecture -->
+                <div class="sketch-card border-sketch-3 p-8 lg:p-10 relative z-10 bg-theme-card ml-10 md:ml-24 lg:ml-32 transform transition-all hover:-translate-y-2 hover:shadow-xl group">
+                    <div class="absolute -left-16 md:-left-20 lg:-left-24 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#FAEEBA] flex items-center justify-center text-theme-dark font-black text-xl md:text-2xl shadow-md group-hover:scale-110 transition-transform">2</div>
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                        <div class="text-5xl text-amber-300 opacity-80 mt-1 hidden md:block"><i class="fas fa-database"></i></div>
+                        <div>
+                            <h3 class="text-3xl font-black text-theme-dark mb-3 tracking-tight">Data Architecture Layer</h3>
+                            <p class="text-theme-dark font-bold text-lg mb-3 tracking-wide">Data normalization, contextual tagging, governance, structured storage, access controls.</p>
+                            <p class="text-slate-600 text-lg leading-relaxed">Fragmented data becomes structured signal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 3: Workflow Orchestration -->
+                <div class="sketch-card border-sketch-4 p-8 lg:p-10 relative z-10 bg-theme-page ml-10 md:ml-24 lg:ml-32 transform transition-all hover:-translate-y-2 hover:shadow-xl group">
+                    <div class="absolute -left-16 md:-left-20 lg:-left-24 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-blue-300 flex items-center justify-center text-theme-dark font-black text-xl md:text-2xl shadow-md group-hover:scale-110 transition-transform">3</div>
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                        <div class="text-5xl text-blue-300 opacity-80 mt-1 hidden md:block"><i class="fas fa-project-diagram"></i></div>
+                        <div>
+                            <h3 class="text-3xl font-black text-theme-dark mb-3 tracking-tight">Workflow Orchestration Layer</h3>
+                            <p class="text-theme-dark font-bold text-lg mb-3 tracking-wide">Process mapping, automation routing, system integrations, event triggers, operational ownership.</p>
+                            <p class="text-slate-600 text-lg leading-relaxed">This layer determines how work flows through the organization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 4: Intelligence -->
+                <div class="sketch-card border-sketch-5 p-8 lg:p-10 relative z-10 bg-theme-blue-light/5 ml-10 md:ml-24 lg:ml-32 transform transition-all hover:-translate-y-2 hover:shadow-xl group border-2 border-theme-blue/20">
+                    <div class="absolute -left-16 md:-left-20 lg:-left-24 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-theme-blue flex items-center justify-center text-theme-dark font-black text-xl md:text-2xl shadow-md group-hover:scale-110 transition-transform">4</div>
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                        <div class="text-5xl text-theme-blue opacity-80 mt-1 hidden md:block"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <h3 class="text-3xl font-black text-theme-dark mb-3 tracking-tight">Intelligence Layer</h3>
+                            <p class="text-theme-dark font-bold text-lg mb-3 tracking-wide">Decision-support systems, AI agents, predictive analytics, performance dashboards.</p>
+                            <p class="text-slate-600 text-lg leading-relaxed">Intelligence is embedded where it measurably improves speed, cost, or accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PERFORMANCE FRAMEWORK -->
+    <section class="py-32 relative bg-dot-grid border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-24 relative">
+                 <div class="absolute top-0 right-1/4 w-32 h-32 bg-theme-blue/5 rounded-full z-0 transform translate-x-1/2 -translate-y-1/2"></div>
+                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-theme-dark mb-6 tracking-tight relative z-10">
+                    The Five-Domain<br/> Performance Framework
+                 </h2>
+                 <p class="text-xl md:text-2xl text-slate-600 mt-6 max-w-3xl mx-auto leading-relaxed font-bold font-hand relative z-10 text-theme-blue transform -rotate-1 hand-underline inline-block">
+                    Intelligence is measured through operational improvement, not tool adoption.
+                 </p>
+                 <p class="text-xl text-slate-600 mt-8 max-w-2xl mx-auto leading-relaxed relative z-10">
+                    A Managed Intelligence Provider validates impact through structured performance domains.
+                 </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 relative mt-12">
+                <!-- Velocity -->
+                <div class="group p-8 sketch-card border-sketch-6 transform hover:-translate-y-1 transition-transform bg-theme-card">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Velocity</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Reduced cycle time across onboarding, approvals, and production workflows.</p>
+                </div>
+                <!-- Cost Efficiency -->
+                <div class="group p-8 sketch-card border-sketch-7 transform hover:-translate-y-1 transition-transform bg-theme-card">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Cost Efficiency</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Lowered operational overhead through automation and redesign.</p>
+                </div>
+                <!-- Decision Quality -->
+                <div class="group p-8 sketch-card border-sketch-8 transform hover:-translate-y-1 transition-transform bg-theme-card">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Decision Quality</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Improved accuracy and speed of business decisions through contextual data.</p>
+                </div>
+                <!-- Experience Optimization -->
+                <div class="group p-8 sketch-card border-sketch-1 transform hover:-translate-y-1 transition-transform bg-theme-card">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Experience Optimization</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Reduced friction for employees and clients interacting with systems.</p>
+                </div>
+                <!-- Visibility -->
+                <div class="group lg:col-start-2 p-8 sketch-card border-sketch-2 transform hover:-translate-y-1 transition-transform bg-theme-card">
+                    <div class="text-4xl text-theme-blue mb-6">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-4 text-theme-dark">Visibility</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">Real-time operational and financial insight for leadership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: WORKFLOW TARGETING MODEL -->
+    <section class="py-24 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+                <div class="lg:col-span-8 relative z-10">
+                     <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-1 hand-underline">
+                        Structured Criteria
+                     </span>
+                     <h2 class="text-4xl md:text-5xl font-black text-theme-dark mb-6 tracking-tight">Where Intelligence<br>Creates Leverage</h2>
+                     
+                     <div class="text-slate-600 text-xl leading-relaxed space-y-6">
+                        <p class="font-bold text-theme-dark">
+                            A MIP applies intelligence selectively using structured criteria.
+                        </p>
+                        <p>Workflows that meet these conditions produce measurable <br/>gains when structured and automated correctly.</p>
+                        
+                        <div class="border-l-4 border-theme-blue pl-6 mt-8">
+                            <p class="font-hand font-bold text-xl text-theme-dark">
+                                Intelligence is deployed after architecture <br/>and process clarity are established.
+                            </p>
+                        </div>
+                     </div>
+                </div>
+                
+                <div class="lg:col-span-4 relative z-10 flex justify-center lg:justify-end">
+                    <div class="group p-6 md:p-10 sticky-note rounded-xl relative transform rotate-2 hover:-rotate-1 transition-all w-full max-w-[360px] font-hand">
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="fas fa-bullseye text-theme-blue text-3xl opacity-80"></i>
+                            <h3 class="font-bold text-2xl text-theme-dark hand-underline pb-1 tracking-tight">The Targeting Model</h3>
+                        </div>
+                        
+                        <ul class="space-y-4 text-slate-800 font-bold tracking-wide text-lg">
+                            <li class="flex items-center group/item pb-3 border-b border-yellow-200/50">
+                                <i class="fas fa-check text-theme-blue text-xl mr-3 group-hover/item:scale-125 transition-transform"></i> 
+                                <span class="uppercase">High-volume</span>
                             </li>
-                            <li class="flex items-start gap-5">
-                                <i class="fas fa-level-down-alt text-theme-red text-2xl mt-1 flex-shrink-0"></i>
-                                <div>
-                                    <strong class="block text-theme-dark text-xl mb-2">Flat Margins</strong>
-                                    <span class="leading-relaxed text-slate-500">Hit the 8-hour revenue ceiling with no
-                                        way to scale gracefully.</span>
-                                </div>
+                            <li class="flex items-center group/item pb-3 border-b border-yellow-200/50">
+                                <i class="fas fa-check text-theme-blue text-xl mr-3 group-hover/item:scale-125 transition-transform"></i> 
+                                <span class="uppercase">Decision-intensive</span>
                             </li>
-                            <li class="flex items-start gap-5">
-                                <i class="fas fa-lock text-theme-red text-2xl mt-1 flex-shrink-0"></i>
-                                <div>
-                                    <strong class="block text-theme-dark text-xl mb-2">Stuck in Place</strong>
-                                    <span class="leading-relaxed text-slate-500">No path to scale beyond adding more
-                                        expensive headcount.</span>
-                                </div>
+                            <li class="flex items-center group/item pb-3 border-b border-yellow-200/50">
+                                <i class="fas fa-check text-theme-blue text-xl mr-3 group-hover/item:scale-125 transition-transform"></i> 
+                                <span class="uppercase">Repetitive</span>
+                            </li>
+                            <li class="flex items-center group/item pb-3 border-b border-yellow-200/50">
+                                <i class="fas fa-check text-theme-blue text-xl mr-3 group-hover/item:scale-125 transition-transform"></i> 
+                                <span class="uppercase">Time-sensitive</span>
+                            </li>
+                            <li class="flex items-center group/item">
+                                <i class="fas fa-check text-theme-blue text-xl mr-3 group-hover/item:scale-125 transition-transform"></i> 
+                                <span class="uppercase">Data-rich</span>
                             </li>
                         </ul>
                     </div>
@@ -135,283 +314,252 @@
         </div>
     </section>
 
-    <!-- VISUAL BREAK -->
-    <div class="py-8 border-t border-slate-200 bg-dot-grid">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div
-                class="font-hand text-theme-blue text-2xl font-bold transform -rotate-1 inline-flex items-center gap-3">
-                <span>But there's a better way...</span>
-                <i class="fas fa-arrow-down text-3xl animate-bounce"></i>
-            </div>
-        </div>
-    </div>
-
-    <!-- THE SOLUTION -->
-    <section class="py-20 border-t border-slate-200 bg-dot-grid">
+    <!-- SECTION 4: CAPABILITY MATURITY MODEL -->
+    <section class="py-24 border-t border-slate-200 bg-dot-grid">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
-                    <i class="fas fa-lightbulb"></i> The Solution
+            <div class="text-center mb-24 relative">
+                <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-1 hand-underline">
+                    The Blueprint
                 </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-theme-dark">The Rise of Managed Intelligence
-                    Providers</h2>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-theme-dark mb-6 tracking-tight">Capability Is Built in Stages</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                     Becoming a Managed Intelligence Provider is a structured progression.
+                </p>
             </div>
 
-            <div class="max-w-4xl mx-auto">
-                <div class="sketch-card border-sketch-5 p-12 relative overflow-hidden bg-theme-blue-light/10">
-                    <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-theme-blue/5 rounded-full transform translate-x-1/2 -translate-y-1/2">
-                    </div>
-                    <div class="relative z-10">
-                        <h3 class="text-2xl md:text-3xl font-extrabold text-theme-dark mb-8 leading-tight">MIPs Don't
-                            Just Fix Problems.
-                            They Build Outcomes.</h3>
-                        <p class="text-lg md:text-xl text-slate-600 mb-6 leading-relaxed">
-                            Managed Intelligence Providers use <strong class="text-theme-dark">data, automation, and
-                                AI</strong> to create
-                            measurable business value for clients.
-                        </p>
-                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
-                            Instead of selling hours, they sell <span class="marker-highlight px-1">measurable
-                                outcomes</span> that
-                            justify higher margins.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE 5 OUTCOME LENSES -->
-    <section class="py-20 border-t border-slate-200 bg-theme-card">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-1">
-                    <i class="fas fa-bullseye"></i> What MIPs Deliver
-                </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-theme-dark">The 5 Outcome Lenses</h2>
-                <p class="text-lg text-slate-600 mt-4">Every client engagement is measured against these outcomes.</p>
-            </div>
-
-            <!-- First Row: 3 Items -->
-            <div class="grid md:grid-cols-3 gap-16 mb-20 mt-12">
-                <div class="text-center group">
-                    <div
-                        class="w-20 h-20 mx-auto bg-blue-50/50 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 border border-blue-100">
-                        <i class="fas fa-bolt text-3xl text-theme-blue"></i>
-                    </div>
-                    <h3 class="font-bold text-xl lg:text-2xl text-theme-dark mb-3">Faster Operations</h3>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        Automate routine tasks to free up your team for strategic work. Reduce response times by 50%+.
-                    </p>
-                </div>
-
-                <div class="text-center group mt-8 md:mt-0">
-                    <div
-                        class="w-20 h-20 mx-auto bg-blue-50/50 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 border border-blue-100">
-                        <i class="fas fa-dollar-sign text-3xl text-theme-blue"></i>
-                    </div>
-                    <h3 class="font-bold text-xl lg:text-2xl text-theme-dark mb-3">Lower Costs</h3>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        Eliminate waste through intelligent automation. Reduce operational expenses without sacrificing
-                        quality.
-                    </p>
-                </div>
-
-                <div class="text-center group mt-8 md:mt-0">
-                    <div
-                        class="w-20 h-20 mx-auto bg-blue-50/50 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 border border-blue-100">
-                        <i class="fas fa-smile text-3xl text-theme-blue"></i>
-                    </div>
-                    <h3 class="font-bold text-xl lg:text-2xl text-theme-dark mb-3">Better Employee Experience</h3>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        Remove repetitive, low-value work. Empower your team to focus on projects that matter.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Visual Break -->
-            <div class="flex justify-center mb-20 relative">
-                <div class="absolute left-1/2 -ml-px w-px h-16 bg-theme-blue-light/50 -top-10"></div>
-                <div
-                    class="bg-theme-card px-8 py-5 border-2 border-theme-dark rounded-full transform -rotate-1 z-10 hover:translate-y-px hover:translate-x-px transition-all cursor-default">
-                    <p class="font-hand text-xl text-theme-dark text-center font-bold">
-                        These aren't just metrics — they're what <span class="marker-highlight px-2">clients actually
-                            pay for</span>.
-                    </p>
-                </div>
-                <div class="absolute left-1/2 -ml-px w-px h-16 bg-theme-blue-light/50 -bottom-10"></div>
-            </div>
-
-            <!-- Second Row: 2 Items (Centered) -->
-            <div class="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto mt-8">
-                <div class="text-center group">
-                    <div
-                        class="w-20 h-20 mx-auto bg-blue-50/50 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 border border-blue-100">
-                        <i class="fas fa-heart text-3xl text-theme-blue"></i>
-                    </div>
-                    <h3 class="font-bold text-xl lg:text-2xl text-theme-dark mb-3">Better Client Experience</h3>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        Deliver predictable, consistent results. Clients love seeing real improvements, not just
-                        promises.
-                    </p>
-                </div>
-
-                <div class="text-center group mt-8 md:mt-0">
-                    <div
-                        class="w-20 h-20 mx-auto bg-blue-50/50 rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 border border-blue-100">
-                        <i class="fas fa-eye text-3xl text-theme-blue"></i>
-                    </div>
-                    <h3 class="font-bold text-xl lg:text-2xl text-theme-dark mb-3">Greater Visibility</h3>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        Real-time dashboards and analytics give everyone insight into what's actually happening.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE TECH STACK -->
-    <section class="py-20 border-t border-slate-200 bg-dot-grid">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="inline-block font-hand text-theme-blue text-xl font-bold mb-4 transform -rotate-2">
-                    <i class="fas fa-cogs"></i> How It Works
-                </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-theme-dark">Data + Automation + AI = Results</h2>
-            </div>
-
-            <!-- The Formula: Open Flow -->
-            <div class="max-w-5xl mx-auto mb-12">
-                <div class="grid md:grid-cols-3 gap-8 items-start relative">
-                    <!-- Data Container -->
-                    <div
-                        class="text-center group p-8 rounded-3xl transition-colors border border-transparent hover:border-slate-200">
-                        <div
-                            class="w-20 h-20 mx-auto border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center mb-6 bg-theme-card transform group-hover:-rotate-3 transition-transform">
-                            <i class="fas fa-database text-3xl text-theme-dark"></i>
-                        </div>
-                        <h3
-                            class="text-3xl font-hand font-bold text-theme-dark mb-4 group-hover:text-theme-blue transition-colors">
-                            Data</h3>
-                        <p class="text-slate-600">
-                            Collect meaningful metrics about operations and performance. Turn chaos into insight.
-                        </p>
-                    </div>
-
-                    <!-- Automation Container -->
-                    <div
-                        class="text-center group p-8 rounded-3xl transition-colors border border-transparent hover:border-slate-200">
-                        <div
-                            class="w-20 h-20 mx-auto border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center mb-6 bg-theme-card transform group-hover:rotate-3 transition-transform">
-                            <i class="fas fa-cogs text-3xl text-theme-dark"></i>
-                        </div>
-                        <h3
-                            class="text-3xl font-hand font-bold text-theme-dark mb-4 group-hover:text-theme-blue transition-colors">
-                            Automation</h3>
-                        <p class="text-slate-600">
-                            Build repeatable workflows that eliminate manual work and free up capacity.
-                        </p>
-                    </div>
-
-                    <!-- AI Container -->
-                    <div
-                        class="text-center group p-8 rounded-3xl transition-colors border border-transparent hover:border-slate-200">
-                        <div
-                            class="w-20 h-20 mx-auto border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center mb-6 bg-theme-card transform group-hover:-rotate-3 transition-transform">
-                            <i class="fas fa-brain text-3xl text-theme-dark"></i>
-                        </div>
-                        <h3
-                            class="text-3xl font-hand font-bold text-theme-dark mb-4 group-hover:text-theme-blue transition-colors">
-                            AI Integration</h3>
-                        <p class="text-slate-600">
-                            Apply intelligent models to handle predictions and continuous improvements.
-                        </p>
-                    </div>
-
-                    <!-- Plus Signs (Desktop only, positioned absolute between columns) -->
-                    <div
-                        class="hidden md:block absolute left-[33%] top-1/2 -translate-y-1/2 -translate-x-1/2 text-5xl font-hand font-bold text-slate-300 pointer-events-none">
-                        +</div>
-                    <div
-                        class="hidden md:block absolute left-[66%] top-1/2 -translate-y-1/2 -translate-x-1/2 text-5xl font-hand font-bold text-slate-300 pointer-events-none">
-                        +</div>
-                </div>
-
-                <!-- Equals Sign & Results below -->
-                <div class="flex flex-col items-center mt-4">
-                    <div
-                        class="text-5xl font-hand font-bold text-theme-dark mb-8 transform rotate-90 md:rotate-0 md:my-8">
-                        =</div>
-
-                    <div
-                        class="bg-theme-card/80 backdrop-blur-sm border-2 border-theme-dark p-10 rounded-3xl text-center max-w-2xl transform hover:scale-105 transition-transform">
-                        <div class="text-3xl lg:text-4xl font-hand font-extrabold text-theme-dark mb-4">Results</div>
-                        <p class="text-lg text-slate-600">
-                            Measurable business outcomes that justify <span
-                                class="marker-highlight px-2 py-1 leading-relaxed inline-block transform -rotate-1">higher
-                                margins</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY THIS MATTERS -->
-    <section class="py-20 border-t border-slate-200 bg-theme-card">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="sketch-card border-sketch-4 p-12 bg-theme-blue-light/10">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-3xl font-extrabold text-theme-dark mb-6 leading-tight">
-                            Why This Matters <span class="marker-highlight px-1">Right Now</span>
+            <!-- Graphic representation: Stacked Containers -->
+            <div class="max-w-4xl mx-auto mb-20 relative px-4 md:px-0 flex flex-col space-y-2">
+                
+                <!-- Stage 1 -->
+                <div class="flex flex-col md:flex-row items-stretch group md:min-h-[140px]">
+                    <!-- Container -->
+                    <div class="w-full md:w-5/12 p-6 bg-theme-card sketch-card border-sketch-3 border-l-[12px] border-l-blue-200 relative z-10 shadow-sm flex items-center">
+                        <h3 class="font-black text-slate-800 text-lg md:text-xl leading-tight m-0 w-full">
+                            <span class="block text-blue-400 text-sm font-bold uppercase tracking-wider mb-1">Stage 1</span>
+                            Reactive Infrastructure Provider
                         </h3>
-                        <p class="text-lg text-slate-600 mb-4 leading-relaxed">
-                            Traditional MSPs are at a crossroads. Clients are demanding <span
-                                class="font-bold text-theme-dark">outcomes</span>, not just services.
+                    </div>
+                    <!-- Information -->
+                    <div class="w-full md:w-7/12 p-6 md:px-8 md:py-6 flex items-center text-left">
+                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed">Infrastructure management and ticket-driven workflows.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="flex flex-col md:flex-row items-stretch group md:min-h-[140px]">
+                    <!-- Container -->
+                    <div class="w-full md:w-5/12 p-6 bg-theme-card sketch-card border-sketch-2 border-l-[12px] border-l-blue-300 relative z-10 shadow-sm flex items-center">
+                        <h3 class="font-black text-slate-800 text-lg md:text-xl leading-tight m-0 w-full">
+                            <span class="block text-blue-500 text-sm font-bold uppercase tracking-wider mb-1">Stage 2</span>
+                            Structured MSP
+                        </h3>
+                    </div>
+                    <!-- Information -->
+                    <div class="w-full md:w-7/12 p-6 md:px-8 md:py-6 flex items-center text-left">
+                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed">Process standardization and internal automation improvements.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="flex flex-col md:flex-row items-stretch group md:min-h-[140px]">
+                    <!-- Container -->
+                    <div class="w-full md:w-5/12 p-6 bg-theme-card sketch-card border-sketch-4 border-l-[12px] border-l-blue-400 relative z-10 shadow-sm flex items-center">
+                        <h3 class="font-black text-slate-800 text-lg md:text-xl leading-tight m-0 w-full">
+                            <span class="block text-blue-600 text-sm font-bold uppercase tracking-wider mb-1">Stage 3</span>
+                            Data-Aware Provider
+                        </h3>
+                    </div>
+                    <!-- Information -->
+                    <div class="w-full md:w-7/12 p-6 md:px-8 md:py-6 flex items-center text-left">
+                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed">Cross-platform reporting and operational visibility.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="flex flex-col md:flex-row items-stretch group md:min-h-[140px]">
+                    <!-- Container -->
+                    <div class="w-full md:w-5/12 p-6 bg-theme-card sketch-card border-sketch-1 border-l-[12px] border-l-theme-blue relative z-10 shadow-sm flex items-center">
+                        <h3 class="font-black text-slate-800 text-lg md:text-xl leading-tight m-0 w-full">
+                            <span class="block text-theme-blue text-sm font-bold uppercase tracking-wider mb-1">Stage 4</span>
+                            Workflow-Oriented Intelligence Provider
+                        </h3>
+                    </div>
+                    <!-- Information -->
+                    <div class="w-full md:w-7/12 p-6 md:px-8 md:py-6 flex items-center text-left">
+                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed">Process mapping and targeted automation within client workflows.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 5 -->
+                <div class="flex flex-col md:flex-row items-stretch group md:min-h-[140px]">
+                    <!-- Container -->
+                    <div class="w-full md:w-5/12 p-6 bg-theme-dark sketch-card border-sketch-5 border-l-[12px] border-l-slate-800 relative z-10 shadow-xl flex items-center overflow-hidden">
+                        <h3 class="font-black text-white text-lg md:text-xl leading-tight m-0 w-full relative z-10">
+                            <span class="block text-theme-blue text-sm font-bold uppercase tracking-wider mb-1">Stage 5</span>
+                            Managed Intelligence Provider
+                        </h3>
+                    </div>
+                    <!-- Information -->
+                    <div class="w-full md:w-7/12 p-6 md:px-8 md:py-6 flex items-center text-left">
+                        <p class="text-lg md:text-xl text-theme-dark leading-relaxed">Integrated architecture, intelligence embedded in high-leverage systems, measurable performance gains.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="max-w-5xl mx-auto mt-12 mb-8 text-center text-slate-600 relative z-10">
+                <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-8 tracking-tight">Each stage builds on the next.</h3>
+                
+                <div class="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-lg font-bold">
+                    <span class="px-6 py-2 bg-slate-100 rounded-full border border-slate-200 text-slate-600">Infrastructure.</span>
+                    <i class="fas fa-arrow-right text-slate-300 hidden md:block"></i>
+                    <i class="fas fa-arrow-down text-slate-300 md:hidden"></i>
+                    <span class="px-6 py-2 bg-slate-100 rounded-full border border-slate-200 text-slate-600">Data maturity.</span>
+                    <i class="fas fa-arrow-right text-slate-300 hidden md:block"></i>
+                    <i class="fas fa-arrow-down text-slate-300 md:hidden"></i>
+                    <span class="px-6 py-2 bg-slate-100 rounded-full border border-slate-200 text-slate-600">Workflow clarity.</span>
+                    <i class="fas fa-arrow-right text-theme-blue hidden md:block"></i>
+                    <i class="fas fa-arrow-down text-theme-blue md:hidden"></i>
+                    <span class="px-6 py-2 bg-theme-blue text-white rounded-full shadow-sm text-xl transform scale-105">Intelligence.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: POSITIONING SHIFT -->
+    <section class="py-24 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="text-center mb-16 relative">
+                 <div class="absolute top-0 right-1/4 w-32 h-32 bg-theme-blue/5 rounded-full z-0 transform translate-x-1/2 -translate-y-1/2"></div>
+                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-theme-dark mb-6 tracking-tight relative z-10 text-balance">
+                    From System Maintenance to <span class="marker-highlight">Operational Engineering</span>
+                 </h2>
+                 <p class="text-xl md:text-2xl text-slate-600 mt-6 max-w-3xl mx-auto leading-relaxed relative z-10 font-bold">
+                    The transition from MSP to MIP changes engagement scope.
+                 </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 mt-12 md:mt-16">
+                <!-- Left: Tight Sketch Card -->
+                <div class="bg-slate-50 p-8 sketch-card border-sketch-3 shadow-sm inline-block w-full md:w-auto">
+                    <div class="space-y-6">
+                        <p class="text-lg md:text-xl text-slate-600 flex items-start gap-4">
+                            <i class="fas fa-arrow-right text-theme-blue mt-1"></i>
+                            Conversations move from tool stacks to metrics.
                         </p>
-                        <p class="text-lg text-slate-600 leading-relaxed">
-                            The MIP model isn't a trend—it's the <span
-                                class="marker-highlight px-1 transform -rotate-1 inline-block">inevitable future</span>
-                            of managed services.
+                        <p class="text-lg md:text-xl text-slate-600 flex items-start gap-4">
+                            <i class="fas fa-arrow-right text-theme-blue mt-1"></i>
+                            From uptime to operational leverage.
+                        </p>
+                        <p class="text-lg md:text-xl text-slate-600 flex items-start gap-4">
+                            <i class="fas fa-arrow-right text-theme-blue mt-1"></i>
+                            From service contracts to performance initiatives.
                         </p>
                     </div>
-                    <div class="flex justify-center">
-                        <div
-                            class="w-56 h-56 border-4 border-theme-dark rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center bg-theme-card transform -rotate-2">
-                            <div class="text-center">
-                                <div class="text-6xl font-black text-theme-dark mb-2">5x</div>
-                                <div class="text-theme-blue font-bold text-xl">Faster Growth</div>
-                            </div>
+                </div>
+
+                <!-- Right: Conclusion Text -->
+                <div class="w-full md:w-5/12 text-left">
+                    <p class="text-lg font-hand font-bold text-slate-700 leading-relaxed border-l-4 border-theme-blue pl-6">
+                        This shift increases<br/>
+                        strategic relevance<br/>
+                        and long-term client alignment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: MARKET CONDITIONS -->
+    <section class="py-24 border-t border-slate-200 bg-dot-grid relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+                
+                <!-- Graphic Graphic Side -->
+                <div class="lg:col-span-5 order-2 lg:order-1 relative flex justify-center lg:justify-start pt-12">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Card behind -->
+                        <div class="absolute inset-0 bg-slate-200 sketch-card border-sketch-2 transform translate-x-4 translate-y-4 rotate-3 scale-105"></div>
+                        <!-- Main Card -->
+                        <div class="bg-theme-blue p-10 md:p-12 sketch-card border-sketch-6 shadow-xl relative z-10 transform -rotate-2">
+                            <div class="text-6xl text-white opacity-90 mb-8"><i class="fas fa-clock"></i></div>
+                            <div class="font-black text-4xl text-white leading-tight mb-6">The Time<br>Is Now</div>
+                            <div class="mb-8"><span class="hand-underline scale-125 origin-left inline-block" style="--color-blue: #fcd34d;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+                            <p class="font-bold text-blue-100 text-lg">The market is ready for intelligence-driven service models.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CTA SECTION -->
-    <section class="py-20 border-t border-slate-200 bg-dot-grid">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="sticky-note p-12 relative overflow-hidden text-center">
-                <div class="absolute -top-6 -right-6 w-24 h-24 bg-yellow-100 rounded-full z-0 opacity-50"></div>
-                <div class="relative z-10">
-                    <h2 class="text-4xl font-extrabold mb-6 text-theme-dark">Ready to Become a MIP?</h2>
-                    <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                        Don't get left behind. Join the Guild and learn how to build intelligence-driven services that
-                        <span class="marker-highlight px-1 transform -rotate-1 inline-block">compounds over time</span>.
-                    </p>
-                    <a href="/miply-website/join.html"
-                        class="sketch-button inline-block px-10 py-5 text-2xl font-black flex items-center justify-center gap-2 max-w-max mx-auto">
-                        Start Your Transformation <i
-                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+                <!-- Text side -->
+                <div class="lg:col-span-7 order-1 lg:order-2">
+                    <span class="font-hand text-theme-blue text-xl font-bold mb-6 inline-block transform -rotate-1">
+                        <span class="hand-underline">Market Reality</span>
+                    </span>
+                    <h2 class="text-4xl lg:text-5xl font-black mb-8 text-theme-dark tracking-tight">
+                        The Conditions Are<br/>Already Present
+                    </h2>
+                    
+                    <ul class="space-y-8 text-xl text-slate-700 mb-12 border-l-2 border-slate-200 pl-6 lg:pl-10">
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-theme-blue text-3xl mt-0 mr-4"></i>
+                            <span class="leading-relaxed">Automation tooling is accelerating.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-theme-blue text-3xl mt-0 mr-4"></i>
+                            <span class="leading-relaxed">AI capability is expanding.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-theme-blue text-3xl mt-0 mr-4"></i>
+                            <span class="leading-relaxed">Clients are evaluating operational efficiency at increasing frequency.</span>
+                        </li>
+                    </ul>
+
+                    <div class="p-6 bg-white sketch-card border-sketch-8 transform hover:scale-[1.02] transition-transform w-max max-w-full">
+                        <p class="font-hand font-bold text-xl text-theme-blue mb-2">The differentiator is:</p>
+                        <p class="font-black text-2xl text-theme-dark tracking-tight">Architectural Discipline.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SECTION 7: CLOSE -->
+    <section class="py-32 relative bg-theme-card border-t border-slate-200 overflow-hidden">
+        <!-- Abstract Background element -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-theme-blue/5 transform skew-x-12 translate-x-32 pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 relative z-10 text-center">
+            
+            <h2 class="text-3xl md:text-5xl lg:text-7xl font-black mb-8 leading-tight text-theme-dark tracking-tighter">
+                Managed Intelligence Provider
+            </h2>
+            
+            <div class="flex flex-nowrap justify-center gap-2 text-xs sm:text-lg md:text-3xl font-black text-slate-300 mb-12 uppercase tracking-[0.2em] whitespace-nowrap">
+                <span class="text-slate-800">Architecture<span class="text-theme-blue ml-1 mr-2">•</span></span>
+                <span class="text-slate-800">Workflow<span class="text-theme-blue ml-1 mr-2">•</span></span>
+                <span class="text-slate-800">Intelligence<span class="text-theme-blue ml-1 mr-2">•</span></span>
+                <span class="text-slate-800">Performance</span>
+            </div>
+
+            <p class="text-xl md:text-2xl text-slate-600 mb-16 max-w-3xl mx-auto leading-relaxed border-t-2 border-slate-200 pt-8 mt-8">
+                The next phase of the industry has a defined model.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <!-- Primary Button -->
+                <a href="/join.html" class="sketch-button-blue px-10 py-5 text-xl font-bold flex justify-center items-center gap-3 group shadow-xl hover:shadow-2xl transition-all">
+                    Enter the Guild
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                
+                <!-- Secondary Link -->
+                <a href="/guild.html" class="sketch-button px-10 py-5 text-xl font-bold flex justify-center items-center gap-3 transition-colors">
+                    Explore the Guild Experience
+                </a>
+            </div>
+        </div>
+    </section>
     <!-- FOOTER -->
     <footer class="bg-theme-card border-t border-slate-200 pt-16 pb-8 relative">
         <div class="max-w-7xl mx-auto px-4">
