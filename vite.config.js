@@ -1,18 +1,20 @@
-﻿import { defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import fs from 'fs'
+
+const htmlFiles = fs.readdirSync(__dirname).filter(file => file.endsWith('.html'));
+const input = {};
+htmlFiles.forEach(file => {
+  const name = file.replace(/\.html$/, '');
+  input[name] = resolve(__dirname, file);
+});
 
 export default defineConfig({
   base: '/miply-website/',
   build: {
     outDir: 'dist',
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        whatIsMip: resolve(__dirname, 'what-is-mip.html'),
-        guild: resolve(__dirname, 'guild.html'),
-        buildLog: resolve(__dirname, 'build-log.html'),
-        join: resolve(__dirname, 'join.html'),
-      },
+      input,
     },
   },
 })
