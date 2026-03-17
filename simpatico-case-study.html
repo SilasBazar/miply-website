@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpatico: MSP to MIP | MIPLY</title>
+    <meta name="description" content="How Simpatico Engineered Intelligence Into Legal Operations">
+    <link rel="icon" type="image/svg+xml" href="/src/Images/Miply_Logo_Dark.svg">
+    <link rel="stylesheet" href="/dist/assets/main-BGI2H16T.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="bg-theme-page min-h-screen flex flex-col selection:bg-amber-200 selection:text-slate-900">
+
+    <!-- NAV BAR -->
+    <nav class="fixed top-0 w-full z-50 bg-theme-page/90 backdrop-blur-sm border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="./"><img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-40 w-auto"></a>
+            </div>
+
+            <div class="hidden lg:flex gap-8 font-medium text-slate-600 text-sm">
+                <a href="./" class="hover:text-theme-blue transition-colors">Home</a>
+                <a href="./what-is-mip.html" class="hover:text-theme-blue transition-colors">What Is a MIP</a>
+                <a href="./guild.html" class="hover:text-theme-blue transition-colors">The Guild</a>
+                <a href="./build-log.html" class="hover:text-theme-blue transition-colors">Build Log</a>
+                <a href="./join.html" class="hover:text-theme-blue transition-colors">Join Us</a>
+            </div>
+
+            <div class="hidden lg:block">
+                <a href="./login.html"
+                    class="sketch-button-blue font-bold text-sm px-6 py-2.5 inline-flex items-center gap-2">
+                    Log in <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-theme-dark text-2xl" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden bg-theme-card border-b border-slate-200/50 px-4 py-4 lg:hidden">
+            <div class="flex flex-col space-y-4 text-center font-medium text-slate-600">
+                <a href="./" class="hover:text-theme-blue">Home</a>
+                <a href="./what-is-mip.html" class="hover:text-theme-blue">What Is a MIP</a>
+                <a href="./guild.html" class="hover:text-theme-blue">The Guild</a>
+                <a href="./build-log.html" class="hover:text-theme-blue">Build Log</a>
+                <a href="./join.html" class="hover:text-theme-blue">Join Us</a>
+                <a href="./login.html"
+                    class="sketch-button-blue font-bold text-sm inline-flex items-center justify-center px-6 py-2.5 mt-4 mx-auto w-max">Log in
+                    <i class="fas fa-arrow-right text-sm ml-2"></i></a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- HERO Section -->
+    <header class="pt-36 pb-40 px-4 bg-dot-grid relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-4xl">
+                <span class="inline-block text-sm font-bold text-theme-blue font-hand uppercase tracking-wider mb-4">Case
+                    Study</span>
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-black text-theme-dark leading-tight mb-6 tracking-tight">
+                    Simpatico <br class="hidden md:block" />
+                    <span class="marker-highlight inline-block transform -rotate-1 px-4">MSP to MIP</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-slate-600 leading-relaxed mb-10 max-w-3xl">
+                    How Simpatico redesigned workflow architecture and deployed targeted intelligence to transform case performance inside a large legal organization.
+                </h2>
+
+                <!-- Meta Block -->
+                <div
+                    class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Industry</p>
+                        <p class="text-sm font-semibold text-slate-700">Legal Services</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Duration</p>
+                        <p class="text-sm font-semibold text-slate-700">Multi-Phase Deployment</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Maturity Stage</p>
+                        <p class="text-sm font-semibold text-slate-700">Stage 3 — Data-Aware Provider</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Focus Area</p>
+                        <p class="text-sm font-semibold text-slate-700">Workflow Intelligence + AI Decision Support</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Domains</p>
+                        <p class="text-sm font-semibold text-slate-700">Velocity, Cost Efficiency, Decision Quality, Visibility</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-32"></div>
+    </header>
+
+    <!-- SECTION 1: Context - Operational Environment -->
+    <section class="py-32 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 01</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Context</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6">Operational Environment</h3>
+                    <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                        <p>
+                            Simpatico had already evolved beyond traditional infrastructure management. The organization operated with structured reporting systems and strong data visibility. They were positioned at Stage 3 of the MIP Capability Maturity Model: Data-Aware Provider.
+                        </p>
+                        <p>
+                            The legal client environment was complex. High-volume case intake. Multiple attorneys and paralegals interacting with documentation-heavy workflows. Extended onboarding timelines. Decision bottlenecks that impacted case selection and performance.
+                        </p>
+                        <p class="font-medium text-slate-700 border-l-4 border-theme-blue pl-6">
+                            The infrastructure was stable. The opportunity lay within workflow structure and intelligence deployment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Problem Definition - The Performance Constraint -->
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 02</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Problem Definition</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6">The Performance Constraint</h3>
+                    <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                        <p>
+                            Case onboarding required three to five days for intake review, documentation processing, and preliminary evaluation.
+                        </p>
+                        <p>
+                            Manual review cycles created:
+                        </p>
+
+                        <!-- Optional Bullet Block -->
+                        <ul class="grid md:grid-cols-2 gap-4 mt-4 p-6 bg-theme-card rounded-xl border border-slate-200">
+                            <li class="flex items-start gap-3">
+                                <span class="text-theme-blue font-bold font-hand">•</span>
+                                <span>Delayed case decisions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-theme-blue font-bold font-hand">•</span>
+                                <span>High paralegal labor dependency</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-theme-blue font-bold font-hand">•</span>
+                                <span>Inconsistent performance outcomes</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-theme-blue font-bold font-hand">•</span>
+                                <span>Limited predictive insight</span>
+                            </li>
+                        </ul>
+
+                        <p class="font-medium text-slate-700 border-l-4 border-theme-blue pl-6 mt-8">
+                            Decision velocity and labor efficiency were the primary constraints. The firm wanted to reduce manual overhead while increasing case win probability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Architecture Analysis - System Assessment -->
+    <section class="py-20 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 03</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Architecture Analysis</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6">System Assessment</h3>
+                    <p class="text-lg text-slate-600 mb-8">Simpatico approached the engagement through the Four-Layer Architecture Model.</p>
+
+                    <div class="space-y-6">
+                        <!-- Infrastructure Layer -->
+                        <div class="sketch-card border-sketch-1 p-6">
+                            <h4 class="font-bold text-theme-dark mb-3">Infrastructure Layer</h4>
+                            <p class="text-slate-600">Stable cloud environment with secure access controls and identity management in place.</p>
+                        </div>
+
+                        <!-- Data Architecture Layer -->
+                        <div class="sketch-card border-sketch-2 p-6">
+                            <h4 class="font-bold text-theme-dark mb-3">Data Architecture Layer</h4>
+                            <p class="text-slate-600">Data required normalization and contextual tagging. A year-long data cleanup initiative preceded intelligence deployment to ensure structured signal rather than fragmented information.</p>
+                        </div>
+
+                        <!-- Workflow Orchestration Layer -->
+                        <div class="sketch-card border-sketch-3 p-6">
+                            <h4 class="font-bold text-theme-dark mb-3">Workflow Orchestration Layer</h4>
+                            <p class="text-slate-600">Case intake, documentation review, and risk evaluation workflows were mapped. Redundant handoffs and manual steps were identified.</p>
+                        </div>
+
+                        <!-- Intelligence Layer -->
+                        <div class="sketch-card border-sketch-4 p-6">
+                            <h4 class="font-bold text-theme-dark mb-3">Intelligence Layer</h4>
+                            <p class="text-slate-600">Existing analytics were descriptive. No structured decision-support model was embedded within the workflow.</p>
+                        </div>
+                    </div>
+
+                    <p class="font-medium text-slate-700 border-l-4 border-theme-blue pl-6 mt-8">
+                        The constraint was not tool access. It was workflow architecture and intelligence sequencing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Deployment Strategy - Intelligence Deployment Plan -->
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 04</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Deployment Strategy</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6">Intelligence Deployment Plan</h3>
+                    <p class="text-lg text-slate-600 mb-8">Simpatico structured deployment in phases.</p>
+
+                    <div class="space-y-8">
+                        <!-- Phase 1 -->
+                        <div class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-theme-blue text-white rounded-full flex items-center justify-center font-bold text-lg">
+                                1</div>
+                            <div class="flex-1 pt-2">
+                                <h4 class="font-bold text-theme-dark text-lg mb-2">Data Structuring</h4>
+                                <p class="text-slate-600">Normalize case data. Add contextual layers. Establish clean access protocols.</p>
+                            </div>
+                        </div>
+
+                        <!-- Phase 2 -->
+                        <div class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-theme-blue text-white rounded-full flex items-center justify-center font-bold text-lg">
+                                2</div>
+                            <div class="flex-1 pt-2">
+                                <h4 class="font-bold text-theme-dark text-lg mb-2">Workflow Redesign</h4>
+                                <p class="text-slate-600">Map intake sequence. Identify repetitive evaluation tasks. Define decision checkpoints.</p>
+                            </div>
+                        </div>
+
+                        <!-- Phase 3 -->
+                        <div class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-theme-blue text-white rounded-full flex items-center justify-center font-bold text-lg">
+                                3</div>
+                            <div class="flex-1 pt-2">
+                                <h4 class="font-bold text-theme-dark text-lg mb-2">Intelligence Deployment</h4>
+                                <p class="text-slate-600">
+                                    Build a Copilot AI agent embedded within the structured intake workflow.
+                                    <br><br>The AI agent was designed to:
+                                    <ul class="list-disc ml-6 mt-2 space-y-1 text-slate-600">
+                                        <li>Ingest structured case information</li>
+                                        <li>Analyze similar historical cases</li>
+                                        <li>Generate risk profiles</li>
+                                        <li>Provide win probability assessments</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="font-medium text-slate-700 border-l-4 border-theme-blue pl-6 mt-10">
+                        Intelligence was introduced after architecture and workflow clarity were secured.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Implementation - Applied Engineering -->
+    <section class="py-20 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 05</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Implementation</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6">Applied Engineering</h3>
+                    <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                        <p>
+                            The deployment began with a controlled pilot group of approximately 150 attorneys operating in high-volume environments.
+                        </p>
+                        <p>
+                            Security was prioritized. The AI agent operated within the firm's protected environment, maintaining data control and compliance standards. Pilot results were measured before broader expansion.
+                        </p>
+                        <p class="font-medium text-slate-700 border-l-4 border-theme-blue pl-6">
+                            Adoption resistance was addressed through structured onboarding and measurable performance visibility. Demand for participation increased organically once measurable gains were demonstrated.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Measurable Outcomes - Performance Impact -->
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 06</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Measurable Outcomes</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-8">Performance Impact</h3>
+                    <p class="text-lg text-slate-600 mb-10">Performance improvements were immediate and quantifiable.</p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Metric 1 -->
+                        <div class="bg-theme-card p-8 rounded-2xl border-2 border-theme-dark">
+                            <p class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Onboarding Time
+                            </p>
+                            <div class="flex items-end gap-4 mb-2">
+                                <div>
+                                    <p class="text-xs text-slate-400 mb-1">Before</p>
+                                    <p class="text-2xl font-bold text-slate-500 line-through">3–5 days</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 mb-1">After</p>
+                                    <p class="text-3xl font-black text-theme-blue">Under 1 <span class="text-sm font-bold text-slate-400">business day</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Metric 2 -->
+                        <div class="bg-theme-card p-8 rounded-2xl border-2 border-theme-dark">
+                            <p class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Paralegal Support Ratio
+                            </p>
+                            <div class="flex items-end gap-4 mb-2">
+                                <div>
+                                    <p class="text-xs text-slate-400 mb-1">Before</p>
+                                    <p class="text-2xl font-bold text-slate-500 line-through">2.7 <span class="text-sm font-bold text-slate-400">paralegals/attorney</span></p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 mb-1">After</p>
+                                    <p class="text-3xl font-black text-theme-blue">1 <span class="text-sm font-bold text-slate-400">paralegal/attorney</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Metric 3 -->
+                        <div class="bg-theme-card p-8 rounded-2xl border-2 border-theme-dark">
+                            <p class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Win Rate
+                            </p>
+                            <div class="flex items-end gap-4 mb-2">
+                                <div>
+                                    <p class="text-xs text-slate-400 mb-1">Before</p>
+                                    <p class="text-2xl font-bold text-slate-500 line-through">40–45%</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 mb-1">After</p>
+                                    <p class="text-3xl font-black text-theme-blue">65%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Metric 4 -->
+                        <div class="bg-theme-card p-8 rounded-2xl border-2 border-theme-dark">
+                            <p class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Decision Velocity
+                            </p>
+                            <div class="flex items-end gap-4 mb-2">
+                                <div>
+                                    <p class="text-xs text-slate-400 mb-1">Before</p>
+                                    <p class="text-2xl font-bold text-slate-500 line-through">Multi-day <span class="text-sm font-bold text-slate-400">review cycles</span></p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 mb-1">After</p>
+                                    <p class="text-3xl font-black text-theme-blue">Same-day <span class="text-sm font-bold text-slate-400">intake decisions</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-lg text-slate-600 mt-8">
+                        These improvements aligned directly with the Five-Domain Performance Framework.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: Performance Domain Alignment -->
+    <section class="py-20 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 07</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Domain Alignment</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-8">Performance Domain Alignment</h3>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
+                        <div class="sticky-note p-8 rotate-[-1.5deg]">
+                            <h4 class="font-hand font-bold text-theme-blue text-xl mb-3">Velocity</h4>
+                            <p class="font-hand text-slate-700 leading-relaxed">Case intake cycle time reduced significantly.</p>
+                        </div>
+                        <div class="sticky-note p-8 rotate-[1.2deg] translate-y-2">
+                            <h4 class="font-hand font-bold text-theme-blue text-xl mb-3">Cost Efficiency</h4>
+                            <p class="font-hand text-slate-700 leading-relaxed">Labor dependency lowered while maintaining output quality.</p>
+                        </div>
+                        <div class="sticky-note p-8 rotate-[-0.8deg]">
+                            <h4 class="font-hand font-bold text-theme-blue text-xl mb-3">Decision Quality</h4>
+                            <p class="font-hand text-slate-700 leading-relaxed">AI-supported risk profiling improved case selection accuracy.</p>
+                        </div>
+                        <div class="sticky-note p-8 rotate-[1.5deg] -translate-y-2">
+                            <h4 class="font-hand font-bold text-theme-blue text-xl mb-3">Experience Optimization</h4>
+                            <p class="font-hand text-slate-700 leading-relaxed">Attorneys operated with clearer, faster decision support.</p>
+                        </div>
+                        <div class="sticky-note p-8 rotate-[-1.2deg] translate-y-1">
+                            <h4 class="font-hand font-bold text-theme-blue text-xl mb-3">Visibility</h4>
+                            <p class="font-hand text-slate-700 leading-relaxed">Performance metrics surfaced in structured dashboards for leadership.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: Maturity Advancement -->
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 08</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Maturity Advancement</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-8">Maturity Progression</h3>
+
+                    <div class="flex flex-col md:flex-row items-center gap-6 mb-8">
+                        <div class="bg-theme-card p-6 rounded-xl border border-slate-200 text-center">
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">From</p>
+                            <p class="text-lg font-bold text-slate-600">Stage 3</p>
+                            <p class="text-sm text-slate-500">Data-Aware Provider</p>
+                        </div>
+                        <div class="text-3xl text-theme-blue">→</div>
+                        <div class="bg-theme-blue p-6 rounded-xl text-center text-white">
+                            <p class="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">To</p>
+                            <p class="text-lg font-bold">Stage 4</p>
+                            <p class="text-sm text-blue-100">Workflow-Oriented Intelligence Provider</p>
+                        </div>
+                    </div>
+
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        And advanced toward Stage 5 by embedding intelligence systematically within client workflows. The organization shifted from reporting visibility to engineered performance improvement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: Transferable Pattern -->
+    <section class="py-20 border-t border-slate-200 bg-theme-card">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 09</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Transferable Pattern</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6">Replicable Architecture Pattern</h3>
+                    <p class="text-lg text-slate-600 mb-6">This deployment model applies across industries with similar
+                        workflow characteristics:</p>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-10">
+                        <div class="flex items-center gap-3 p-4 bg-theme-page rounded-lg">
+                            <span class="text-theme-blue font-bold">•</span>
+                            <span class="text-slate-700">High-volume intake processes</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-theme-page rounded-lg">
+                            <span class="text-theme-blue font-bold">•</span>
+                            <span class="text-slate-700">Documentation-heavy review cycles</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-theme-page rounded-lg">
+                            <span class="text-theme-blue font-bold">•</span>
+                            <span class="text-slate-700">Decision-intensive environments</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-theme-page rounded-lg">
+                            <span class="text-theme-blue font-bold">•</span>
+                            <span class="text-slate-700">Labor-dependent evaluation tasks</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-slate-800 mb-4">The pattern is transferable:</p>
+                        <ol class="space-y-2 text-slate-700 font-medium">
+                            <li class="flex items-center gap-3"><span class="text-theme-blue font-bold font-hand">1.</span> Structure data</li>
+                            <li class="flex items-center gap-3"><span class="text-theme-blue font-bold font-hand">2.</span> Map workflow</li>
+                            <li class="flex items-center gap-3"><span class="text-theme-blue font-bold font-hand">3.</span> Embed intelligence</li>
+                            <li class="flex items-center gap-3"><span class="text-theme-blue font-bold font-hand">4.</span> Measure performance</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: Client Perspective - Leadership Insight -->
+    <section class="py-20 border-t border-slate-200 bg-dot-grid">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3">
+                    <span class="text-xs font-bold text-theme-blue font-hand uppercase tracking-wider">Section 10</span>
+                    <h2 class="text-2xl font-bold text-theme-dark mt-2">Client Perspective</h2>
+                </div>
+                <div class="lg:col-span-9">
+                    <h3 class="text-xl font-bold text-slate-800 mb-8">Leadership Insight</h3>
+
+                    <blockquote class="relative">
+                        <div class="text-6xl text-theme-blue/20 absolute -top-4 -left-2">"</div>
+                        <p class="text-2xl md:text-3xl text-slate-700 font-medium leading-relaxed pl-8 pr-4 italic">
+                            "To really partner on the business side and drive outcomes is a huge difference from being a traditional technology provider. Intelligence must be embedded in processes, not layered on top."
+                        </p>
+                        <footer class="mt-6 pl-8">
+                            <p class="text-lg font-bold text-theme-dark">Cory Ruthardt</p>
+                            <p class="text-slate-500">President, Simpatico Systems</p>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: Close -->
+    <section class="py-24 bg-theme-card border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-theme-dark mb-6 leading-tight">
+                Simpatico’s transformation demonstrates the structured progression from infrastructure support to intelligence-driven operational engineering.
+            </h2>
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Architecture enabled workflow clarity. Workflow clarity enabled intelligence deployment. Intelligence deployment produced measurable performance improvement.
+                <br><br>
+                This is the Managed Intelligence Provider model in practice.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="./guild.html"
+                    class="sketch-button-blue px-8 py-4 text-lg font-bold inline-flex items-center justify-center gap-3 group">
+                    Enter the Guild
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+                <a href="./what-is-mip.html"
+                    class="sketch-button px-8 py-4 text-lg font-bold inline-flex items-center justify-center gap-3">
+                    Explore the MIP Capability Model
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-theme-card border-t border-slate-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <p class="text-2xl font-black text-theme-dark mb-4">MIPLY</p>
+                    <p class="text-slate-500 mb-8 max-w-sm">
+                        Building the infrastructure for intelligent operations. Join the Guild to access frameworks,
+                        playbooks, and a community of practitioners.
+                    </p>
+                    <div class="flex gap-2 max-w-md">
+                        <input type="email" placeholder="Enter your email"
+                            class="flex-1 px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-theme-blue">
+                        <button class="sketch-button-blue px-6 py-3 font-bold">Subscribe</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8 text-sm">
+                    <div>
+                        <p class="font-bold text-slate-800 mb-4">Explore</p>
+                        <ul class="space-y-3 font-medium text-slate-600">
+                            <li><a href="./what-is-mip.html" class="hover:text-theme-dark transition-colors">What is
+                                    MIP</a></li>
+                            <li><a href="./guild.html" class="hover:text-theme-dark transition-colors">The Guild</a>
+                            </li>
+                            <li><a href="./build-log.html" class="hover:text-theme-dark transition-colors">Build Log</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold text-slate-800 mb-4">Connect</p>
+                        <ul class="space-y-3 font-medium text-slate-600">
+                            <li><a href="./join.html" class="hover:text-theme-dark transition-colors">Join the Guild</a>
+                            </li>
+                            <li><a href="https://linkedin.com" class="hover:text-theme-dark transition-colors"
+                                    target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <p class="text-sm text-slate-500">&copy; 2024 MIPLY. All rights reserved.</p>
+                </div>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="text-slate-400 hover:text-theme-dark transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

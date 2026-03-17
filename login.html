@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in // MIPLY</title>
+    <link rel="stylesheet" href="/dist/assets/main-BGI2H16T.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="bg-theme-page min-h-screen flex flex-col selection:bg-theme-yellow-highlight selection:text-theme-dark items-center justify-center relative bg-dot-grid">
+
+    <!-- Abstract Background element -->
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-theme-blue opacity-[0.03] transform skew-x-12 translate-x-32 pointer-events-none z-0"></div>
+
+    <div class="w-full max-w-md p-8 md:p-12 sketch-card border-sketch-3 bg-theme-card relative z-10 shadow-xl">
+        <div class="flex justify-center mb-8">
+            <a href="./"><img src="src/Images/Miply_Logo_Dark.svg" alt="MIPLY Logo" class="h-24 w-auto drop-shadow-sm"></a>
+        </div>
+        
+        <h1 class="text-3xl font-black text-center text-theme-dark mb-8 tracking-tight">Log in</h1>
+        
+        <form class="space-y-6">
+            <div>
+                <label for="username" class="block text-sm font-bold text-slate-700 mb-2 font-hand">Username</label>
+                <input type="text" id="username" name="username" class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-theme-blue transition-colors font-medium text-slate-800" placeholder="Enter your username" required>
+            </div>
+            
+            <div>
+                <label for="password" class="block text-sm font-bold text-slate-700 mb-2 font-hand">Password</label>
+                <input type="password" id="password" name="password" class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-theme-blue transition-colors font-medium text-slate-800" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="w-full sketch-button-blue font-bold text-lg px-6 py-4 mt-8 flex items-center justify-center gap-2 group shadow-md hover:shadow-lg transition-all rounded-[255px_15px_225px_15px/15px_225px_15px_255px]">
+                Log in <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </button>
+        </form>
+        
+        <div class="mt-8 text-center border-t border-slate-200 pt-6">
+            <p class="text-slate-600 font-medium tracking-wide">
+                Don't have an account? <br class="sm:hidden" /> 
+                <a href="./join.html" class="text-theme-blue font-bold hover:text-theme-dark transition-colors inline-block sm:ml-1 mt-2 sm:mt-0 font-hand text-lg border-b-2 border-transparent hover:border-theme-dark pb-0.5">Apply to join the Guild</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

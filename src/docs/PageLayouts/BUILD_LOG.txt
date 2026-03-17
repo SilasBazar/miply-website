@@ -1,0 +1,162 @@
+BUILD LOG 
+
+Full Page Copy 
+
+ 
+
+HERO 
+
+Headline: 
+Build Log 
+
+Subheadline: 
+Field reports, architecture insights, and applied intelligence in action. 
+
+Body Paragraph: 
+The Build Log documents how Managed Intelligence Providers design systems, restructure workflows, and deliver measurable business performance improvements. 
+
+This is not commentary. It is applied engineering. 
+
+ 
+
+SECTION 1 — CASE STUDIES 
+
+Headline: 
+Intelligence in Practice 
+
+Body Paragraph: 
+These case studies document measurable operational transformation across industries. Each example highlights architecture decisions, workflow redesign, intelligence deployment, and quantifiable outcomes. 
+
+ 
+
+Case Study Card Structure (For Designer) 
+
+Each card should include: 
+
+Industry or client type 
+
+Core challenge 
+
+Intelligence architecture applied 
+
+Measurable performance outcomes 
+
+Link to full case study 
+
+ 
+
+Example Preview Copy: 
+
+Legal Services — Workflow Intelligence Deployment 
+Reduced onboarding from 3–5 days to under one day through structured data cleanup and AI-driven decision support. 
+
+Professional Services — Performance Visibility Framework 
+Deployed cross-functional dashboards to surface operational inefficiencies and improve decision velocity. 
+
+ 
+
+Button: 
+View All Case Studies 
+
+ 
+
+SECTION 2 — ARTICLES 
+
+Headline: 
+Architecture Notes 
+
+Body Paragraph: 
+These articles explore systems thinking, workflow engineering, and intelligence deployment frameworks that define the Managed Intelligence Provider model. 
+
+Topics include: 
+
+Data structuring principles 
+
+Workflow targeting strategies 
+
+Automation discipline 
+
+Performance measurement frameworks 
+
+Architecture maturity progression 
+
+ 
+
+Article Card Structure (For Designer) 
+
+Each article preview should include: 
+
+Title 
+
+Brief technical summary 
+
+Estimated read time 
+
+Category tag 
+
+ 
+
+Example Preview Copy: 
+
+The Four-Layer Intelligence Stack 
+Understanding how infrastructure, data, workflow, and intelligence layers integrate to produce durable performance improvement. 
+
+Workflow Targeting Matrix Explained 
+A structured approach to identifying high-leverage automation opportunities. 
+
+ 
+
+Button: 
+Explore All Articles 
+
+ 
+
+SECTION 3 — FRAMEWORK LIBRARY (Optional Highlight Section) 
+
+Headline: 
+Core Frameworks 
+
+Body Paragraph: 
+The Build Log includes reference material supporting the MIP Architecture Model and Capability Maturity progression. 
+
+Highlighted frameworks may include: 
+
+MIP Architecture Model 
+
+Capability Maturity Model 
+
+Five-Domain Performance Framework 
+
+Workflow Targeting Model 
+
+This section reinforces intellectual authority. 
+
+ 
+
+SECTION 4 — STRUCTURE 
+
+Headline: 
+Documented. Repeatable. Measurable. 
+
+Body Paragraph: 
+The purpose of the Build Log is not thought leadership for its own sake. It exists to document patterns, surface architecture decisions, and reinforce measurable outcomes. 
+
+Engineering discipline compounds when it is recorded and refined. 
+
+ 
+
+SECTION 5 — CLOSE 
+
+Headline: 
+Intelligence Leaves a Trail. 
+
+Body Paragraph: 
+Every intelligence-driven system produces measurable signal. The Build Log records those signals and the architectural decisions behind them. 
+
+Primary Button: 
+Enter the Guild 
+
+Secondary Link: 
+Apply for Membership 
+
+ 

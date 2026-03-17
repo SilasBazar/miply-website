@@ -127,9 +127,9 @@
         background: var(--color-bg-card);
     }
 
-    .border-sketch:hover {
+    /* .border-sketch:hover {
         transform: translateY(-2px) rotate(0.5deg);
-    }
+    } */
 
     /* Base sketch card class */
     .sketch-card {
@@ -140,9 +140,9 @@
         transition: all 0.2s ease;
     }
 
-    .sketch-card:hover {
+    /* .sketch-card:hover {
         transform: translateY(-2px) rotate(0.5deg);
-    }
+    } */
 
     /* Sketch Buttons (Solid Styles Only) */
     .sketch-button {
